@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,700i|Montserrat:400,700");
+
+$background: #d5fbff;
+$text: #000;
+$text-gray: #474747;
+$text-link: #379cd6;
+$heading: #000;
+$default-button: #474747;
+$green-button: #76a440;
+$blue-button: #379cd6;
+$dark-blue: #003954;
+$red: #c64545;
+$light-green: #dfead3;
+$light-orange: #f0b657;
+
+$font-main: "Merriweather", "Georgia", serif;
+$font-main-italic: italic;
+$sans-serif: "Montserrat", sans-serif;
+
+$image-path: "../img" !default;
+$fallback-extension: "png" !default;
+$retina-suffix: "@2x";
+
+//color chips
+//reds
+$indianred: indianred;
+$lightcoral: lightcoral;
+$salmon: salmon;
+$darksalmon: darksalmon;
+$lightsalmon: lightsalmon;
+$crimson: crimson;
+$firebrick: firebrick;
+$darkred: darkred;
+
+//yellows
+$gold: gold;
+$yellow: yellow;
+$lightyellow: lightyellow;
+$lemonchiffon: lemonchiffon;
+$lightgoldenrodyellow: lightgoldenrodyellow;
+$papayawhip: papayawhip;
+$moccasin: moccasin;
+$peachpuff: peachpuff;
+$palegoldenrod: palegoldenrod;
+$khaki: khaki;
+$darkkhaki: darkkhaki;
+
+//bg reds
+$bg-indianred: indianred;
+$bg-lightcoral: lightcoral;
+$bg-salmon: salmon;
+$bg-darksalmon: darksalmon;
+$bg-lightsalmon: lightsalmon;
+$bg-crimson: crimson;
+$bg-red: red;
+$bg-firebrick: firebrick;
+$bg-darkred: darkred;
+
+//bg blues
+$bg-mediumslateblue: mediumslateblue;
+$bg-royalblue: royalblue;
+$bg-blue: blue;
+$bg-mediumblue: mediumblue;
+$bg-darkblue: darkblue;
+$bg-navy: navy;
+$bg-midnightblue: midnightblue;
+
+//bg yellows
+$bg-gold: gold;
+$bg-yellow: yellow;
+$bg-lightyellow: lightyellow;
+$bg-lemonchiffon: lemonchiffon;
+$bg-lightgoldenrodyellow: lightgoldenrodyellow;
+$bg-papayawhip: papayawhip;
+$bg-moccasin: moccasin;
+$bg-peachpuff: peachpuff;
+$bg-palegoldenrod: palegoldenrod;
+$bg-khaki: khaki;
+$bg-darkkhaki: darkkhaki;

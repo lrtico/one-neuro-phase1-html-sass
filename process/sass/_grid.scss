@@ -1,0 +1,67 @@
+//Grid
+// 100 / 7 = 14.28vw per column
+.grid {
+  height: 100vh;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .grid-line {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 14.28vw;
+    z-index: 1;
+    @include bp-tablet {
+      width: 16.667vw;
+    }
+  }
+  .grid-line--visible {
+    border-right: 1px solid hsla(329, 90%, 54%, 0.3);
+  }
+  .grid-line:first-of-type {
+    left: 0;
+  }
+  .grid-line:nth-of-type(2) {
+    left: 14.28vw;
+  }
+  .grid-line:nth-of-type(3) {
+    left: 28.56vw;
+  }
+  .grid-line:nth-of-type(4) {
+    left: 42.84vw;
+  }
+  .grid-line:nth-of-type(5) {
+    left: 57.12vw;
+  }
+  .grid-line:nth-of-type(6) {
+    left: 71.4vw;
+  }
+  .grid-line:nth-of-type(7) {
+    left: 85.68vw;
+  }
+  .grid-line--visible:last-of-type {
+    border-right: none;
+  }
+}
+.grid.grid--off {
+  display: none;
+}
+
+.content {
+  margin-right: 1.6rem;
+  width: 85.68vw;
+
+  .col {
+    padding: 0 3.57vw;
+  }
+
+  .grid__half {
+    width: 42.84vw;
+  }
+
+  section {
+    margin-bottom: 360px;
+  }
+}

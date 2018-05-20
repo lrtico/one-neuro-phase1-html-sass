@@ -1,0 +1,104 @@
+//Positioning
+.abs--right {
+	position: absolute;
+	top: 0px;
+	right: -54px;
+}
+
+.abs--bottom {
+	position: absolute;
+	bottom: 18px;
+	right: 18px;
+}
+
+.abs--right-top {
+	@extend .abs--right;
+	top: 18px;
+	right: 18px;
+}
+
+.pos--rel { position: relative; }
+
+.text-center {
+	display: block;
+	text-align: center;
+}
+
+.text--right {
+    display: block;
+	text-align: right;
+}
+
+.center--vertical {
+	@include push--auto;
+}
+
+//Margins
+.mt0 { margin-top: 0; }
+.mt9 { margin-top: 9px; }
+.mt18 { margin-top: 18px; }
+.mt40 { margin-top: 40px; }
+.mb0 { margin-bottom: 0; }
+.mb9 { margin-bottom: 9px; }
+.mb20 { margin-bottom: 20px; }
+.mb40 { margin-bottom: 40px; }
+.mr3 { margin-right: 3px; }
+.mr9 { margin-right: 9px; }
+.mr18 { margin-right: 18px; }
+.mr40 { margin-right: 40px; }
+.ml9 { margin-left: 9px; }
+.man { margin: 0; }
+.mv10 { margin: 10px 0; }
+.mv20 { margin: 20px 0; }
+.mv40 { margin: 40px 0; }
+
+//Padding
+.pb0 { padding-bottom: 0px; }
+.pa18 { padding: 18px; }
+
+//Colors
+.green { color: $green-button; }
+.icon--blue { color: $blue-button; }
+.icon--red { color: $red; }
+.icon--gray { color: $text-gray; }
+.icon--white { color: white; }
+.icon--green { color: $green-button; }
+
+//BG colors
+.bg-yellow-1 { background-color: $bg-gold; }
+.bg-yellow-2 { background-color: $bg-yellow; }
+.bg-yellow-3 { background-color: $bg-lightyellow; }
+.bg-yellow-4 { background-color: $bg-lemonchiffon; }
+.bg-yellow-5 { background-color: $bg-moccasin; }
+
+.bg-red-1 { background-color: $bg-crimson; }
+.bg-red-2 { background-color: $bg-darkred; }
+.bg-red-3 { background-color: $bg-darksalmon; }
+.bg-red-4 { background-color: $bg-firebrick; }
+.bg-red-5 { background-color: $bg-indianred; }
+
+.bg-blue-1 { background-color: $bg-blue }
+.bg-blue-2 { background-color: $bg-darkblue; }
+.bg-blue-3 { background-color: $bg-mediumblue; }
+.bg-blue-4 { background-color: $bg-mediumslateblue; }
+.bg-blue-5 { background-color: $bg-navy; }
+
+//Display
+.block { display: block; }
+
+.hide-me-on-desktop {
+	display: none;
+	@include bp-tablet {
+		display: block;
+		width: 100%;
+	}
+}
+
+.hide-me-on-mobile--inline {
+	display: inline-block;
+	@include bp-tablet {
+		display: none;
+	}
+}
+
+.width--auto { width: auto; }

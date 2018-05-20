@@ -1,0 +1,178 @@
+//Fancy headings
+.fancy {
+  line-height: 1.5;
+  overflow: hidden;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;
+}
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-top: 1px solid $text-gray;
+  top: 50%;
+  width: 2000px;
+}
+
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+//Selects based off of Google Material Design
+.select {
+  cursor: pointer;
+  display: inline-block;
+
+  > .select-value {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(110, 115, 118, 0.3);
+    box-sizing: content-box;
+    color: $text-gray;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    min-width: 50px;
+    min-height: 26px;
+    padding: 3px 9px;
+    position: relative;
+    -webkit-box-align: center;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+  }
+
+  > .select-placeholder {
+    color: rgba(0, 0, 0, 0.38);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    order: 1;
+    //	pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+    z-index: 1;
+  }
+}
+
+.select > div span:first-child {
+  //    -webkit-transition: -webkit-transform .4s cubic-bezier(.25,.8,.25,1);
+  //    transition: -webkit-transform .4s cubic-bezier(.25,.8,.25,1);
+  //    transition: transform .4s cubic-bezier(.25,.8,.25,1);
+  //    transition: transform .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1);
+  //    -webkit-transform-origin: left top;
+  //    transform-origin: left top;
+}
+
+.select > div span.active {
+  color: rgba(0, 0, 0, 0.93);
+}
+
+.select > .select-placeholder:hover {
+  border-bottom-color: $blue-button;
+}
+
+.select > .select-value span.select-icon {
+  display: block;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-grid-row-align: flex-end;
+  align-items: flex-end;
+  text-align: end;
+  width: 24px;
+  margin: 0 4px;
+  -webkit-transform: translate3d(0, -2px, 0);
+  transform: translate3d(0, -2px, 0);
+  @include font-size(1.2);
+}
+
+.select > div span.select-icon:after {
+  display: block;
+  content: "\25BC";
+  position: relative;
+  top: 4px;
+  speak: none;
+  font-size: 13px;
+  -webkit-transform: scaleY(0.5) scaleX(1);
+  transform: scaleY(0.5) scaleX(1);
+}
+
+.select-menu-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 90;
+  //    opacity: 0;
+  display: none;
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+
+  .select-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    max-height: 256px;
+    min-height: 48px;
+    overflow-y: hidden;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+
+    .menu-content {
+      background: rgb(255, 255, 255);
+      min-width: 136px;
+      min-height: 48px;
+      max-height: 256px;
+      overflow-y: auto;
+
+      .option {
+        -webkit-align-items: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        height: 48px;
+        -webkit-box-align: center;
+        padding: 0 16px;
+        -webkit-transition: background 0.15s linear;
+        transition: background 0.15s linear;
+        width: auto;
+      }
+
+      .option:hover {
+        background: rgb(238, 238, 238);
+      }
+    }
+  }
+}
+
+.select-styled-wrap {
+  @include font-size(1.7);
+
+  .select-value {
+    border: 1px solid $text-gray;
+    box-shadow: none;
+    min-width: 190px;
+
+    i {
+      position: absolute;
+      top: 7px;
+      right: 9px;
+    }
+  }
+}

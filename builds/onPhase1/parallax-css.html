@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Parallax CSS demo</title>
+      <link rel="stylesheet" href="css/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        
+        <div class="parallax">
+            
+            <div id="group-1" class="parallax__group">
+                <div class="parallax__layer parallax__layer--base">
+                    <span>Base</span>
+                </div>
+            </div>
+            
+            <div id="group-2" class="parallax__group">
+                <div class="parallax__layer parallax__layer--base">
+                    <span>Base</span>
+                    <div class="lineGrow"></div>
+                    <div>
+                        <input type="text" name="" value="" id="shake-test" style="width: 50%"/>
+                    </div>
+                </div>
+                <div class="parallax__layer parallax__layer--back">
+                    <span>Background</span>
+                </div>
+                <div class="parallax__layer parallax__layer--deep">
+                    <span>Deep Background</span>
+                </div>
+            </div>
+            
+            <div id="group-3" class="parallax__group">
+                <div class="parallax__layer parallax__layer--base">
+                    <span>Base</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+
+    </body>
+</html>

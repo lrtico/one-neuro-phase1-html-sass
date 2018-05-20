@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 6.3rem 0 0;
+  padding: 0;
+  font-size: 2.8rem;
+  font-family: $font-main;
+  color: $text;
+  background-color: $background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//Typography
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $heading;
+  margin: 0;
+}
+
+h1 {
+  @include font-size(6.4);
+  font-weight: normal;
+  margin-top: 18px;
+  @include bp-tablet {
+    @include font-size(4);
+  }
+}
+
+h2 {
+  @include font-size(4.5);
+  font-weight: normal;
+  margin-bottom: 54px;
+}
+
+h3 {
+  @include font-size(2.4);
+}
+
+p {
+  @include font-size(2.8);
+  line-height: 30px;
+  line-height: 3rem;
+  margin: 0 0 1.8rem 0;
+}

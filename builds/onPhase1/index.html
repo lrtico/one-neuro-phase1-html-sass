@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Report Generator | Version 1.0 | One Neuro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="grid">
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+  </div>
+  <header>
+    <nav>
+      Hamburger menu
+    </nav>
+    </div>
+  </header>
+  <div class="content questions">
+    <section class="col grid__half">
+      <p>Welcome back! I’m here to assist you in creating another amazing report to help someone in need.</p>
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
+          </div>
+        </div>
+        <span>Press enter</span>
+      </div>
+    </section>
+    <section class="col">
+      <h2>
+        <strong>Demographics</strong> info</h2>
+      <div class="flex">
+        <div class="grid__half">
+          <div class="question">
+            <label>What's the patient's
+              <strong>name</strong>?</label>
+            <div class="flex question__input">
+              <img src="img/icons-happy-face-name.svg" alt="Happy face icon">
+              <input type="text" tabindex="1">
+            </div>
+          </div>
+          <div class="question">
+            <label>What's their
+              <strong>date of birth</strong>?</label>
+            <div class="flex question__input">
+              <img src="img/icons-birthday-cake.svg" alt="Birthday cake icon">
+              <input type="text" tabindex="3">
+            </div>
+          </div>
+          <div class="question">
+            <label>What
+              <strong>school</strong> did they attend?</label>
+            <div class="flex question__input">
+              <img src="img/icons-school.svg" alt="School icon">
+              <input type="text" tabindex="5">
+            </div>
+          </div>
+          <div class="question">
+            <label>What's the parent's
+              <strong>name</strong>?</label>
+            <div class="flex question__input">
+              <img src="img/icons-happy-face-name.svg" alt="Happy face icon">
+              <input type="text" tabindex="7">
+            </div>
+          </div>
+          <div class="question">
+            <label>What's the patient's
+              <strong>gender</strong>?</label>
+            <div class="question__input">
+              <div class="question__single-choice">
+                Pick one please
+              </div>
+              <!-- Checkbox -->
+              <ul class="question__choices flex--wrap">
+                <li class="question__choice flex--col flex--center-vertical flex--space-between">
+                  <input type="hidden" name="value" value="Male" autocomplete="off">
+                  <div class="question__tick-wrap">
+                    <i class="material-icons question__tick">check</i>
+                  </div>
+                  <div class="question__image-wrap">
+                    <img src="img/icons-woman-generic.svg" alt="Woman generic icon">
+                  </div>
+                  <div class="question__text-wrap flex flex--center-vertical">
+                    <div class="question__label">
+                      <div class="question__letter">
+                        <span>A</span>
+                      </div>
+                    </div>
+                    <div class="question__text-label">
+                      Girl
+                    </div>
+                  </div>
+                  <div class="question__bg"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid__half">
+          <div class="question">
+            <label>Where were they
+              <strong>evaluated</strong>?</label>
+            <div class="flex question__input">
+              <img src="img/icons-office-building.svg" alt="Office building icon">
+              <input type="text" tabindex="2">
+            </div>
+          </div>
+          <div class="question">
+            <label>What's their
+              <strong>age</strong>?</label>
+            <div class="flex question__input">
+              <input type="text" tabindex="4">
+            </div>
+          </div>
+          <div class="question">
+            <label>What
+              <strong>grade</strong> are they in?</label>
+            <div class="flex question__input">
+              <input type="text" tabindex="6">
+            </div>
+          </div>
+          <div class="question">
+            <label>What's the parent's
+              <strong>phone</strong>?</label>
+            <div class="flex question__input">
+              <img src="img/icons-phone.svg" alt="Phone icon">
+              <input type="text" tabindex="8">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
