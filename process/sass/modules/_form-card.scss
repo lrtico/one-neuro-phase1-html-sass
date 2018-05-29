@@ -1,0 +1,14 @@
+li.question__card.question__form-card {
+  justify-content: flex-end;
+  min-height: 187px;
+
+  .cardTextInput {
+    font-family: "Montserrat", sans-serif;
+    @include font-size(1.2);
+    padding: 9px 3px;
+  }
+
+  .question__key-label {
+    margin-top: 27px;
+  }
+}

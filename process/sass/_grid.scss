@@ -1,9 +1,9 @@
 //Grid
 // 100 / 7 = 14.28vw per column
 .grid {
-  height: 100vh;
+  height: 100%;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
 
@@ -57,8 +57,32 @@
     padding: 0 3.57vw;
   }
 
+  .grid__sixth {
+    width: 14.28vw;
+  }
+
+  .grid__quarter {
+    width: 21.42vw;
+  }
+
+  .grid__third {
+    width: 28.56vw;
+  }
+
   .grid__half {
     width: 42.84vw;
+  }
+
+  .grid__two-thirds {
+    width: 57.12vw;
+  }
+
+  .grid__three-quarters {
+    width: 64.26vw;
+  }
+
+  .grid__five-sixths {
+    width: 71.4vw;
   }
 
   section {

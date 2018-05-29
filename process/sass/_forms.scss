@@ -13,13 +13,13 @@ input {
   border-bottom: 1px solid #aaaaaa;
   color: #333;
   font-family: $font-main;
-  padding: 10px 18px;
+  padding: 9px 18px;
   width: 100%;
 }
 
 input:focus {
   outline: none;
-  border-bottom: 2px solid #0a83cf;
+  border-bottom: 1px solid #0a83cf;
 }
 
 input[type="radio"],

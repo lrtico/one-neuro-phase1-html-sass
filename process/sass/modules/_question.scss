@@ -1,6 +1,15 @@
+.question.grid__half,
+.question.grid__three-quarters,
+.question.grid__quarter {
+  min-height: 104px;
+  padding-right: 9px;
+}
+
 .question {
   margin-bottom: 54px;
   .question__input {
+    align-items: flex-end;
+    min-height: 64px;
     > img {
       margin-right: 9px;
       width: 54px;
@@ -14,8 +23,13 @@
       padding: 0;
       margin: 0;
 
+      > li.question__choice:focus {
+        outline: 1px dotted gray;
+      }
+
       > li.question__choice {
         cursor: pointer;
+        margin-right: 9px;
         position: relative;
         padding: 15px 9px;
         //background-color: rgba(255, 0, 0, 0.4);
@@ -27,19 +41,21 @@
           right: 0;
           top: 0;
           > i {
+            display: none;
           }
         }
         .question__tick-wrap:after {
-          content: "";
-          position: absolute;
-          right: 0;
-          top: 0;
           border-style: solid;
           border-width: 0 47px 53px 0;
           border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent;
-          opacity: 0.6;
-          width: 0;
+          content: "";
+          display: none;
           height: 0;
+          opacity: 0.6;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 0;
         }
 
         .question__image-wrap {
@@ -69,6 +85,28 @@
             border: 1px solid rgba(0, 0, 0, 0.2);
             margin-right: 9px;
             padding: 6px;
+            transition: background-color 0.25s;
+          }
+        }
+        .cardLabel {
+          align-self: flex-start;
+          font-family: "Montserrat", sans-serif;
+          @include font-size(1.4);
+        }
+      }
+
+      li.question__choice.question__checkbox--selected {
+        .question__tick-wrap:after {
+          display: block;
+        }
+        .question__tick {
+          display: block;
+        }
+        .question__label {
+          background-color: rgba(0, 0, 0, 0.2);
+
+          > .question__letter {
+            color: #474747;
           }
         }
       }
@@ -77,6 +115,136 @@
       }
       > li.question__choice:hover .question__text-wrap {
         color: #474747;
+      }
+    }
+  }
+  .question__datepicker {
+    position: relative;
+    > img {
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      bottom: 6px;
+      right: 0px;
+      width: 36px;
+    }
+  }
+
+  .question__single-choice {
+    display: none;
+  }
+  // Cards
+  ul.question__cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    > li.question__card:focus {
+      outline: 1px dotted gray;
+    }
+
+    li.question__card {
+      cursor: pointer;
+      margin-right: 9px;
+      position: relative;
+      padding: 15px 9px;
+      width: 145px;
+      transition: all 0.25s ease-out;
+
+      .question__image-wrap {
+        > img {
+          margin-right: 9px;
+          width: 54px;
+        }
+      }
+
+      .question__tick-wrap {
+        position: absolute;
+        right: 0;
+        top: 0;
+        > i {
+          display: none;
+        }
+      }
+      .question__tick-wrap:after {
+        border-style: solid;
+        border-width: 0 47px 53px 0;
+        border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent;
+        content: "";
+        display: none;
+        height: 0;
+        opacity: 0.6;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+      }
+
+      .cardLabel {
+        align-self: flex-start;
+        font-family: "Montserrat", sans-serif;
+        @include font-size(1.4);
+        line-height: 1em;
+      }
+
+      .question__key-label {
+        color: #a3a3a3;
+        font-family: "Montserrat", sans-serif;
+        @include font-size(1.8);
+        transition: color 0.25s;
+
+        .question__key {
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          margin-right: 9px;
+          padding: 6px;
+          transition: background-color 0.25s;
+        }
+      }
+      .question__bg {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: background-color 0.25s ease-out;
+        z-index: -1;
+      }
+    }
+
+    li.question__card:hover .question__bg {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    li.question__card.question__form-card:hover .question__bg {
+      background-color: transparent;
+    }
+
+    li.question__card:hover .question__key-label {
+      color: #474747;
+      .question__key {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    li.question__card.question__checkbox--selected {
+      cursor: default;
+      justify-content: center;
+      .question__tick-wrap:after {
+        display: block;
+      }
+      .question__tick {
+        display: block;
+      }
+      .question__label {
+        background-color: rgba(0, 0, 0, 0.2);
+
+        > .question__letter {
+          color: #474747;
+        }
+      }
+      .question__bg {
+        background-color: transparent;
       }
     }
   }

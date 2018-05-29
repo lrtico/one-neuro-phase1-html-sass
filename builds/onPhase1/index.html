@@ -28,6 +28,363 @@
   <div class="content questions">
     <section class="col grid__half">
       <p>Welcome back! I’m here to assist you in creating another amazing report to help someone in need.</p>
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
+          </div>
+        </div>
+        <span>Press enter</span>
+      </div>
+    </section>
+
+    <section class="col">
+      <h2>
+        <strong>Demographics</strong> info</h2>
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's the patient's
+            <strong>name</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-happy-face-name.svg" alt="Happy face icon">
+            <input type="text" tabindex="1">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>Where were they
+            <strong>evaluated</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-office-building.svg" alt="Office building icon">
+            <input type="text" tabindex="2">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's their
+            <strong>date of birth</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-birthday-cake.svg" alt="Birthday cake icon">
+            <input type="text" tabindex="3">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>What's their
+            <strong>age</strong>?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="4">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What
+            <strong>school</strong> did they attend?</label>
+          <div class="flex question__input">
+            <img src="img/icons-school.svg" alt="School icon">
+            <input type="text" tabindex="5">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>What
+            <strong>grade</strong> are they in?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="6">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's the parent's
+            <strong>name</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-happy-face-name.svg" alt="Happy face icon">
+            <input type="text" tabindex="7">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>What's the parent's
+            <strong>phone</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone icon">
+            <input type="text" tabindex="8">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's the patient's
+            <strong>gender</strong>?</label>
+          <div class="question__input">
+            <div class="question__single-choice">
+              Pick one please
+            </div>
+            <!-- Checkbox -->
+            <ul class="question__choices flex--wrap">
+              <li class="question__choice flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)" tabindex="9">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__image-wrap">
+                  <img src="img/icons-woman-generic.svg" alt="Woman generic icon">
+                </div>
+                <div class="question__text-wrap flex flex--center-vertical">
+                  <div class="question__label">
+                    <div class="question__letter">
+                      <span>A</span>
+                    </div>
+                  </div>
+                  <div class="question__text-label">
+                    Girl
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+              <li class="question__choice flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)" tabindex="10">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__image-wrap">
+                  <img src="img/icons-man-generic.svg" alt="Man generic icon">
+                </div>
+                <div class="question__text-wrap flex flex--center-vertical">
+                  <div class="question__label">
+                    <div class="question__letter">
+                      <span>B</span>
+                    </div>
+                  </div>
+                  <div class="question__text-label">
+                    Boy
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>Which
+            <strong>hand</strong> is dominant?</label>
+          <div class="question__input">
+            <div class="question__single-choice">
+              Pick one please
+            </div>
+            <!-- Radio Picture Cards -->
+            <ul class="question__choices flex--wrap">
+              <li class="question__choice flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)" tabindex="11">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__image-wrap">
+                  <img src="img/icons-hand-left.svg" alt="Left hand">
+                </div>
+                <div class="question__text-wrap flex flex--center-vertical">
+                  <div class="question__label">
+                    <div class="question__letter">
+                      <span>A</span>
+                    </div>
+                  </div>
+                  <div class="question__text-label">
+                    Left
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+              <li class="question__choice flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)" tabindex="12">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__image-wrap">
+                  <img src="img/icons-hand-right.svg" alt="Right hand">
+                </div>
+                <div class="question__text-wrap flex flex--center-vertical">
+                  <div class="question__label">
+                    <div class="question__letter">
+                      <span>B</span>
+                    </div>
+                  </div>
+                  <div class="question__text-label">
+                    Right
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>What's the
+          <strong>date(s)</strong> of testing?</label>
+        <div class="flex question__input question__datepicker">
+          <img src="img/icons-calendar-small.svg" alt="Datepicker">
+          <input type="text" tabindex="13">
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
+          </div>
+        </div>
+        <span>Press enter</span>
+      </div>
+    </section>
+
+    <section class="col">
+      <h2>
+        <strong>Person</strong> answering questions</h2>
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's the person's
+            <strong>name</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-happy-face-name.svg" alt="Happy face">
+            <input type="text" tabindex="14">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>What's the person's
+            <strong>address</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-house.svg" alt="House">
+            <input type="text" tabindex="15">
+          </div>
+        </div>
+      </div>
+      <div class="question">
+        <label>What's the
+          <strong>relationship</strong> to the child?</label>
+        <div class="question__single-choice">
+          Pick one please
+        </div>
+        <!-- Radio Cards -->
+        <ul class="question__cards flex--wrap">
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="16">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>A</span>
+              </div>
+              <div class="question__key-text">
+                Mother
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="16">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>B</span>
+              </div>
+              <div class="question__key-text">
+                Father
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="17">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>C</span>
+              </div>
+              <div class="question__key-text">
+                Grandmother
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="18">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>D</span>
+              </div>
+              <div class="question__key-text">
+                Grandfather
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="19">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>E</span>
+              </div>
+              <div class="question__key-text">
+                Aunt
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="flex">
+        <div class="question">
+          <label>
+            <strong>Home</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="20">
+          </div>
+        </div>
+        <div class="question">
+          <label>
+            <strong>Work</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="21">
+          </div>
+        </div>
+        <div class="question">
+          <label>
+            <strong>Cell</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="22">
+          </div>
+        </div>
+      </div>
+      <!-- Button -->
       <div class="btn-wrap flex--center-vertical">
         <div class="btn">
           <div class="btn__hover"></div>
@@ -41,109 +398,623 @@
     </section>
     <section class="col">
       <h2>
-        <strong>Demographics</strong> info</h2>
-      <div class="flex">
-        <div class="grid__half">
-          <div class="question">
-            <label>What's the patient's
-              <strong>name</strong>?</label>
-            <div class="flex question__input">
-              <img src="img/icons-happy-face-name.svg" alt="Happy face icon">
-              <input type="text" tabindex="1">
-            </div>
-          </div>
-          <div class="question">
-            <label>What's their
-              <strong>date of birth</strong>?</label>
-            <div class="flex question__input">
-              <img src="img/icons-birthday-cake.svg" alt="Birthday cake icon">
-              <input type="text" tabindex="3">
-            </div>
-          </div>
-          <div class="question">
-            <label>What
-              <strong>school</strong> did they attend?</label>
-            <div class="flex question__input">
-              <img src="img/icons-school.svg" alt="School icon">
-              <input type="text" tabindex="5">
-            </div>
-          </div>
-          <div class="question">
-            <label>What's the parent's
-              <strong>name</strong>?</label>
-            <div class="flex question__input">
-              <img src="img/icons-happy-face-name.svg" alt="Happy face icon">
-              <input type="text" tabindex="7">
-            </div>
-          </div>
-          <div class="question">
-            <label>What's the patient's
-              <strong>gender</strong>?</label>
-            <div class="question__input">
-              <div class="question__single-choice">
-                Pick one please
-              </div>
-              <!-- Checkbox -->
-              <ul class="question__choices flex--wrap">
-                <li class="question__choice flex--col flex--center-vertical flex--space-between">
-                  <input type="hidden" name="value" value="Male" autocomplete="off">
-                  <div class="question__tick-wrap">
-                    <i class="material-icons question__tick">check</i>
-                  </div>
-                  <div class="question__image-wrap">
-                    <img src="img/icons-woman-generic.svg" alt="Woman generic icon">
-                  </div>
-                  <div class="question__text-wrap flex flex--center-vertical">
-                    <div class="question__label">
-                      <div class="question__letter">
-                        <span>A</span>
-                      </div>
-                    </div>
-                    <div class="question__text-label">
-                      Girl
-                    </div>
-                  </div>
-                  <div class="question__bg"></div>
-                </li>
-              </ul>
-            </div>
+        <strong>Reasons</strong> for referral</h2>
+      <div class="question">
+        <div class="flex question__input flex--center-vertical">
+          <i class="material-icons">
+            arrow_right
+          </i>
+          <input type="text" tabindex="23">
+        </div>
+      </div>
+      <div class="question">
+        <div class="flex question__input flex--center-vertical">
+          <i class="material-icons">
+            arrow_right
+          </i>
+          <input type="text" tabindex="24">
+        </div>
+      </div>
+      <div class="question">
+        <div class="flex question__input flex--center-vertical">
+          <i class="material-icons">
+            arrow_right
+          </i>
+          <input type="text" tabindex="25">
+        </div>
+      </div>
+      <div class="question">
+        <div class="flex question__input flex--center-vertical">
+          <i class="material-icons">
+            arrow_right
+          </i>
+          <input type="text" tabindex="26">
+        </div>
+      </div>
+      <!-- Add another button -->
+      <div class="add-another">
+        <span>Add another</span>
+      </div>
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
           </div>
         </div>
-        <div class="grid__half">
-          <div class="question">
-            <label>Where were they
-              <strong>evaluated</strong>?</label>
-            <div class="flex question__input">
-              <img src="img/icons-office-building.svg" alt="Office building icon">
-              <input type="text" tabindex="2">
+        <span>Press enter</span>
+      </div>
+    </section>
+    <section class="col">
+      <div class="flex">
+        <h2>
+          <strong>Records</strong> reviewed</h2>
+        <div class="toggleVis">
+          <div class="btn__hover"></div>
+          <span>disable</span>
+        </div>
+      </div>
+      <div class="question">
+        <!-- Card -->
+        <ul class="question__cards flex--wrap">
+          <li class="question__card question__form-card flex--col flex--center-vertical flex--space-between question__checkbox--selected"
+            tabindex="27">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
             </div>
+            <p class="cardLabel">Educational Evaluation</p>
+            <p class="cardLabel">12/30/18</p>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col flex--center-vertical flex--space-between" tabindex="23">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <input type="text" class="cardTextInput" placeholder="Type a title">
+            <input type="text" class="cardTextInput" placeholder="Enter a date">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>1</span>
+              </div>
+              <div class="question__key-text">
+                Add
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+        </ul>
+      </div>
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
           </div>
-          <div class="question">
-            <label>What's their
-              <strong>age</strong>?</label>
-            <div class="flex question__input">
-              <input type="text" tabindex="4">
-            </div>
+        </div>
+        <span>Press enter</span>
+      </div>
+    </section>
+
+
+
+    <section class="col">
+      <h2>
+        <strong>Background</strong> history</h2>
+      <h3 class="h3--sib-h4">Parent's
+        <strong>information</strong>
+      </h3>
+      <div class="flex">
+        <h4>Mother</h4>
+        <div class="toggleVis">
+          <div class="btn__hover"></div>
+          <span>primary caregiver?</span>
+        </div>
+        <div class="toggleVis">
+          <div class="btn__hover"></div>
+          <span>disable</span>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's the mother's
+            <strong>name</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-happy-face-name.svg" alt="Happy face icon">
+            <input type="text" tabindex="28">
           </div>
-          <div class="question">
-            <label>What
-              <strong>grade</strong> are they in?</label>
-            <div class="flex question__input">
-              <input type="text" tabindex="6">
-            </div>
+        </div>
+        <div class="question grid__half">
+          <label>Is she the
+            <strong>stepmother</strong>?</label>
+          <div class="question__single-choice">
+            Pick one please
           </div>
-          <div class="question">
-            <label>What's the parent's
-              <strong>phone</strong>?</label>
-            <div class="flex question__input">
-              <img src="img/icons-phone.svg" alt="Phone icon">
-              <input type="text" tabindex="8">
-            </div>
+          <!-- Radio Cards Yes/No -->
+          <ul class="question__cards flex--wrap">
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="29">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>A</span>
+                </div>
+                <div class="question__key-text">
+                  Yes
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="30">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>B</span>
+                </div>
+                <div class="question__key-text">
+                  No
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's her
+            <strong>address</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-house.svg" alt="House">
+            <input type="text" tabindex="31">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>What's her
+            <strong>age</strong>?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="32">
           </div>
         </div>
       </div>
+
+
+      <div class="flex">
+        <div class="question">
+          <label>
+            <strong>Home</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="33">
+          </div>
+        </div>
+        <div class="question">
+          <label>
+            <strong>Work</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="34">
+          </div>
+        </div>
+        <div class="question">
+          <label>
+            <strong>Cell</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="35">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's the mother's
+            <strong>occupation</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-woman-generic.svg" alt="Woman">
+            <input type="text" tabindex="36">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>Who's her
+            <strong>employer</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-business-building.svg" alt="Office">
+            <input type="text" tabindex="37">
+          </div>
+        </div>
+      </div>
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
+          </div>
+        </div>
+        <span>Press enter</span>
+      </div>
+    </section>
+
+    <section class="col">
+      <h3 class="h3--sib-h4">Parent's
+        <strong>information</strong>
+      </h3>
+      <div class="flex">
+        <h4>Father</h4>
+        <div class="toggleVis">
+          <div class="btn__hover"></div>
+          <span>primary caregiver?</span>
+        </div>
+        <div class="toggleVis">
+          <div class="btn__hover"></div>
+          <span>disable</span>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's the father's
+            <strong>name</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-happy-face-name.svg" alt="Happy face icon">
+            <input type="text" tabindex="38">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>Is he the
+            <strong>stepfather</strong>?</label>
+          <div class="question__single-choice">
+            Pick one please
+          </div>
+          <!-- Radio Cards Yes/No -->
+          <ul class="question__cards flex--wrap">
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="39">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>A</span>
+                </div>
+                <div class="question__key-text">
+                  Yes
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="40">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>B</span>
+                </div>
+                <div class="question__key-text">
+                  No
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's his
+            <strong>address</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-house.svg" alt="House">
+            <input type="text" tabindex="41">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>What's his
+            <strong>age</strong>?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="42">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex">
+        <div class="question">
+          <label>
+            <strong>Home</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="43">
+          </div>
+        </div>
+        <div class="question">
+          <label>
+            <strong>Work</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="44">
+          </div>
+        </div>
+        <div class="question">
+          <label>
+            <strong>Cell</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="45">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex">
+        <div class="question grid__half">
+          <label>What's the father's
+            <strong>occupation</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-man-generic.svg" alt="Woman">
+            <input type="text" tabindex="46">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>Who's his
+            <strong>employer</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-business-building.svg" alt="Office">
+            <input type="text" tabindex="47">
+          </div>
+        </div>
+      </div>
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
+          </div>
+        </div>
+        <span>Press enter</span>
+      </div>
+    </section>
+
+    <section class="col">
+      <h3 class="h3--sib-h4">Parent's
+        <strong>information</strong>
+      </h3>
+      <div class="flex">
+        <h4>Other</h4>
+        <div class="toggleVis">
+          <div class="btn__hover"></div>
+          <span>primary caregiver?</span>
+        </div>
+        <div class="toggleVis">
+          <div class="btn__hover"></div>
+          <span>disable</span>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>Does this child have any other
+          <strong>parent(s)/stepparent(s)</strong>?</label>
+        <div class="question__single-choice">
+          Pick one please
+        </div>
+        <!-- Radio Cards Yes/No -->
+        <ul class="question__cards flex--wrap">
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="48">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>A</span>
+              </div>
+              <div class="question__key-text">
+                Yes
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="49">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>B</span>
+              </div>
+              <div class="question__key-text">
+                No
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex">
+        <div class="question grid__three-quarters">
+          <label>What's the person's
+            <strong>name</strong>?</label>
+          <div class="flex question__input">
+            <img src="img/icons-happy-face-name.svg" alt="Happy face icon">
+            <input type="text" tabindex="50">
+          </div>
+        </div>
+        <div class="question grid__quarter">
+          <label>What's their
+            <strong>age</strong>?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="51">
+          </div>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>What's the
+          <strong>relationship</strong> to the child?</label>
+        <div class="question__single-choice">
+          Pick one please
+        </div>
+        <!-- Radio Cards Yes/No -->
+        <ul class="question__cards flex--wrap">
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="52">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>A</span>
+              </div>
+              <div class="question__key-text">
+                Grandmother
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="53">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>B</span>
+              </div>
+              <div class="question__key-text">
+                Grandfather
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="54">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>C</span>
+              </div>
+              <div class="question__key-text">
+                Aunt
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="55">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>D</span>
+              </div>
+              <div class="question__key-text">
+                Uncle
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="56">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>E</span>
+              </div>
+              <div class="question__key-text">
+                Other
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex">
+        <div class="question">
+          <label>
+            <strong>Home</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="57">
+          </div>
+        </div>
+        <div class="question">
+          <label>
+            <strong>Work</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="58">
+          </div>
+        </div>
+        <div class="question">
+          <label>
+            <strong>Cell</strong> phone?</label>
+          <div class="flex question__input">
+            <img src="img/icons-phone.svg" alt="Phone">
+            <input type="text" tabindex="59">
+          </div>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>What's their
+          <strong>address</strong>?</label>
+        <div class="flex question__input">
+          <img src="img/icons-house.svg" alt="House">
+          <input type="text" tabindex="60">
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
+          </div>
+        </div>
+        <span>Press enter</span>
+      </div>
     </section>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

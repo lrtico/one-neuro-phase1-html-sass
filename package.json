@@ -1,8 +1,7 @@
 {
   "name": "OneNeuroPhase1",
   "version": "0.0.1",
-  "description":
-    "HTML, Sass, JS for the frontend of One Neuro's report generator web app",
+  "description": "HTML, Sass, JS for the frontend of One Neuro's report generator web app",
   "repository": {
     "type": "git",
     "url": "https://github.com/lrtico/one-neuro-phase1"
