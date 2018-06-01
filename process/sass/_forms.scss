@@ -13,6 +13,7 @@ input {
   border-bottom: 1px solid #aaaaaa;
   color: #333;
   font-family: $font-main;
+  line-height: 1em;
   padding: 9px 18px;
   width: 100%;
 }
@@ -240,4 +241,27 @@ form.container__offset {
     left: 0;
     width: 100%;
   }
+}
+
+//Card Radio Button
+.cardRadioButton {
+  align-self: flex-start;
+  margin: 0;
+
+  > input {
+    position: inherit;
+  }
+
+  > label {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    color: #474747;
+    line-height: 1em;
+    margin: 0;
+  }
+}
+
+li > .cardRadioButton:nth-child(even) {
+  margin-bottom: 18px;
 }

@@ -198,6 +198,10 @@
           padding: 6px;
           transition: background-color 0.25s;
         }
+
+        input {
+          width: inherit;
+        }
       }
       .question__bg {
         border: 1px solid rgba(0, 0, 0, 0.2);
@@ -229,7 +233,8 @@
 
     li.question__card.question__checkbox--selected {
       cursor: default;
-      justify-content: center;
+      justify-content: flex-start;
+      padding-top: 27px;
       .question__tick-wrap:after {
         display: block;
       }

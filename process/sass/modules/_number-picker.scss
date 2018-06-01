@@ -1,0 +1,26 @@
+.questions {
+  ul.question__cards {
+    li.question__card.question__number-picker {
+      justify-content: center;
+      margin-right: 0px;
+      min-width: 100px;
+      padding: 15px;
+      width: auto;
+
+      .question__bg {
+        border-radius: 0px;
+        border-right: none;
+      }
+    }
+    li.question__card.question__number-picker:last-of-type {
+      .question__bg {
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+      }
+    }
+    li.question__card.question__checkbox--selected {
+      .question__key-text {
+        color: #474744;
+      }
+    }
+  }
+}
