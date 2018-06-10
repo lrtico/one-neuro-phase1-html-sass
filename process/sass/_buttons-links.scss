@@ -124,6 +124,9 @@ a:hover {
   background-color: $default-button;
   color: white;
 }
+h2 + .toggleVis {
+  margin-bottom: 54px;
+}
 .toggleVis {
   background-color: $background-trans;
   border-radius: 30px;
@@ -132,6 +135,7 @@ a:hover {
   font-family: "Montserrat", sans-serif;
   @include font-size(1.8);
   margin-left: 27px;
+  margin-bottom: 21px;
   padding: 9px 18px;
   position: relative;
   overflow: hidden;

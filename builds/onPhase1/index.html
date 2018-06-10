@@ -19,11 +19,47 @@
     <div class="grid-line grid-line--visible "></div>
     <div class="grid-line grid-line--visible "></div>
   </div>
+  <div id="page-trans"></div>
   <header>
-    <nav>
-      Hamburger menu
+    <nav class="nav">
+      <div class="nav__exterior">
+        <button class="nav__burger" onclick="menuToggle()">
+          <span class="line--1"></span>
+          <span class="line--2"></span>
+          <span class="line--3"></span>
+          <div class="nav__burger__label">MENU</div>
+        </button>
+      </div>
+      <div class="nav__interior">
+        <ul class="nav__interior__items">
+          <li class="nav__item">
+            <a href="">
+              <span class="nav__item--main type--a2 type--uppercase">Import</span>
+            </a>
+            <div class="nav__item__description">
+              <span>
+                <img src="img/icons-import.svg" alt="Import">
+              </span>
+            </div>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              <span class="nav__item--main type--a2 type--uppercase">Make a PDF</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              <span class="nav__item--main type--a2 type--uppercase">Print</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              <span class="nav__item--main type--a2 type--uppercase">New report</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    </div>
   </header>
   <div class="content questions">
     <section class="col grid__half">
@@ -2064,7 +2100,7 @@
       <h2>
         <strong>Medical &amp; development</strong> history
       </h2>
-      <div class="flex">
+      <div class="flex--center-vertical">
         <h4>Pregnancy</h4>
         <!-- Disable/Enable Button -->
         <div class="toggleVis">
@@ -2558,6 +2594,848 @@
       </div>
     </section>
 
+    <section class="col">
+      <div class="flex--center-vertical">
+        <h4>Birth</h4>
+        <!-- Disable/Enable Button -->
+        <div class="toggleVis">
+          <div class="btn__hover"></div>
+          <span>disable</span>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__two-thirds">
+          <label>At this child's birth, what was the
+            <strong>mother's age</strong>?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="150">
+          </div>
+        </div>
+        <div class="question grid__third">
+          <label>The
+            <strong>father's</strong>?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="151">
+          </div>
+        </div>
+      </div>
+      <div class="question grid__two-thirds">
+        <label>Mother's age at
+          <strong>birth</strong> of first child?</label>
+        <div class="flex question__input">
+          <input type="text" tabindex="152">
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__half">
+          <label>Was this child
+            <strong>born</strong> in a hospital?</label>
+          <div class="question__single-choice">
+            Pick one please
+          </div>
+          <!-- Radio Cards Yes/No -->
+          <ul class="question__cards flex--wrap">
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="153">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>A</span>
+                </div>
+                <div class="question__key-text">
+                  Yes
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="154">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>B</span>
+                </div>
+                <div class="question__key-text">
+                  No
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="question grid__half">
+          <label>If no, where?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="155">
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__half">
+          <label>
+            <strong>Length</strong> of pregnancy?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="156" placeholder="# of weeks">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>Birth
+            <strong>weight</strong> ?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="157" placeholder="lbs &amp; oz">
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__half">
+          <label>
+            <strong>Length</strong> of labor?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="158" placeholder="# of hours">
+          </div>
+        </div>
+        <div class="question grid__half">
+          <label>Apgar
+            <strong>score</strong> ?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="159">
+          </div>
+        </div>
+      </div>
+      <div class="question">
+        <label>Child's
+          <strong>condition</strong> at birth?</label>
+        <div class="flex question__input">
+          <input type="text" tabindex="160">
+        </div>
+      </div>
+      <div class="question">
+        <label>Mother's
+          <strong>condition</strong> at birth?</label>
+        <div class="flex question__input">
+          <input type="text" tabindex="161">
+        </div>
+      </div>
+      <div class="question">
+        <label>Check any of the
+          <strong>following conditions</strong> that occured during birth.</label>
+        <!-- Radio Cards Yes/No -->
+        <ul class="question__cards flex--wrap">
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="161">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>A</span>
+              </div>
+              <div class="question__key-text">
+                Forceps used
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="162">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>B</span>
+              </div>
+              <div class="question__key-text">
+                Breech birth
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="163">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>C</span>
+              </div>
+              <div class="question__key-text">
+                Labor induced
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+            tabindex="163">
+            <input type="hidden" name="value" value="Male" autocomplete="off">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>D</span>
+              </div>
+              <div class="question__key-text">
+                Ceasarean delivery
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="question">
+        <label>Other
+          <strong>delivery</strong> complications? Please describe.</label>
+        <div class="flex question__input">
+          <input type="text" tabindex="164">
+        </div>
+      </div>
+      <div class="question">
+        <label>
+          <strong>Incubator</strong> ? How long?</label>
+        <div class="flex question__input">
+          <input type="text" tabindex="165">
+        </div>
+      </div>
+      <div class="question">
+        <label>Jaundiced: Bilirubin lights? How long?</label>
+        <div class="flex question__input">
+          <input type="text" tabindex="166">
+        </div>
+      </div>
+      <div class="question">
+        <label>Breathing problems
+          <strong>right after</strong> birth? Please describe.</label>
+        <div class="flex question__input">
+          <input type="text" tabindex="167">
+        </div>
+      </div>
+      <div class="question">
+        <label>
+          <strong>Supplemental</strong> oxygen? If yes, how long?</label>
+        <div class="flex question__input">
+          <input type="text" tabindex="168">
+        </div>
+      </div>
+      <div class="question">
+        <label>Was
+          <strong>anethesia</strong> used during delivery? If yes, what kind?</label>
+        <div class="flex question__input">
+          <input type="text" tabindex="169">
+        </div>
+      </div>
+      <div class="question">
+        <label>
+          <strong>Length</strong> of stay in hospital?</label>
+        <!-- 2 column full width buttons -->
+        <div class="flex">
+          <div class="grid__half">
+            <h4>Mother</h4>
+            <!-- Radio Cards Yes/No -->
+            <ul class="question__cards flex--wrap question__cards--full-width">
+              <li class="question__card question__radio flex--col" onclick="tcTickSelected(this)" tabindex="170">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__key-label flex flex--center-vertical">
+                  <div class="question__key">
+                    <span>A</span>
+                  </div>
+                  <div class="question__key-text">
+                    1-2 days
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+              <li class="question__card question__radio flex--col" onclick="tcTickSelected(this)" tabindex="171">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__key-label flex flex--center-vertical">
+                  <div class="question__key">
+                    <span>B</span>
+                  </div>
+                  <div class="question__key-text">
+                    3-7 days
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+              <li class="question__card question__radio flex--col" onclick="tcTickSelected(this)" tabindex="172">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__key-label flex flex--center-vertical">
+                  <div class="question__key">
+                    <span>C</span>
+                  </div>
+                  <div class="question__key-text">
+                    8-10 days
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+              <li class="question__card question__radio flex--col" onclick="tcTickSelected(this)" tabindex="173">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__key-label flex flex--center-vertical">
+                  <div class="question__key">
+                    <span>D</span>
+                  </div>
+                  <div class="question__key-text">
+                    11+ days
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="grid__half">
+            <h4>Child</h4>
+            <!-- Radio Cards Yes/No -->
+            <ul class="question__cards flex--wrap question__cards--full-width">
+              <li class="question__card question__radio flex--col" onclick="tcTickSelected(this)" tabindex="174">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__key-label flex flex--center-vertical">
+                  <div class="question__key">
+                    <span>A</span>
+                  </div>
+                  <div class="question__key-text">
+                    1-2 days
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+              <li class="question__card question__radio flex--col" onclick="tcTickSelected(this)" tabindex="175">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__key-label flex flex--center-vertical">
+                  <div class="question__key">
+                    <span>B</span>
+                  </div>
+                  <div class="question__key-text">
+                    3-7 days
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+              <li class="question__card question__radio flex--col" onclick="tcTickSelected(this)" tabindex="176">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__key-label flex flex--center-vertical">
+                  <div class="question__key">
+                    <span>C</span>
+                  </div>
+                  <div class="question__key-text">
+                    8-10 days
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+              <li class="question__card question__radio flex--col" onclick="tcTickSelected(this)" tabindex="177">
+                <input type="hidden" name="value" value="Male" autocomplete="off">
+                <div class="question__tick-wrap">
+                  <i class="material-icons question__tick">check</i>
+                </div>
+                <div class="question__key-label flex flex--center-vertical">
+                  <div class="question__key">
+                    <span>D</span>
+                  </div>
+                  <div class="question__key-text">
+                    11+ days
+                  </div>
+                </div>
+                <div class="question__bg"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
+          </div>
+        </div>
+        <span>Press enter</span>
+      </div>
+    </section>
+
+    <section class="col">
+      <div class="flex--center-vertical">
+        <h4>Development</h4>
+        <!-- Disable/Enable Button -->
+        <div class="toggleVis">
+          <div class="btn__hover"></div>
+          <span>disable</span>
+        </div>
+      </div>
+      <div class="question">
+        <label>
+          At what
+          <strong>age</strong> did this child first do the following?
+          <br>Please indicate year/months of age.</label>
+      </div>
+      <div class="question">
+        <!-- Card -->
+        <ul class="question__cards flex--wrap">
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="177">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Turn over?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Edit</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="178">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Walk down stairs?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Add</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="179">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Sit alone?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Add</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="180">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Show interest in or attraction to sound?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Add</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="181">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Crawl?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Add</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="182">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Understand first words?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Add</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="183">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Stand alone?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Add</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="184">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Speak first words?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Add</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="185">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Walk alone?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Add</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="186">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Speak in sentences?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Add</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+          <li class="question__card question__form-card flex--col question__card--vertical-center flex--center-vertical" tabindex="187">
+            <div class="question__tick-wrap">
+              <i class="material-icons question__tick">check</i>
+            </div>
+            <p class="cardLabel">Walk upstairs?</p>
+            <input type="text" class="cardTextInput" placeholder="Year/months">
+            <div class="question__key-label flex flex--center-vertical">
+              <div class="question__key">
+                <span>Add</span>
+              </div>
+            </div>
+            <div class="question__bg"></div>
+          </li>
+        </ul>
+      </div>
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
+          </div>
+        </div>
+        <span>Press enter</span>
+      </div>
+    </section>
+
+    <section class="col">
+      <div class="flex--center-vertical">
+        <h4>Development</h4>
+        <!-- Disable/Enable Button -->
+        <div class="toggleVis">
+          <div class="btn__hover"></div>
+          <span>Disable by clicking</span>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__third">
+          <label>Was this child
+            <strong>breast-fed</strong>?</label>
+          <!-- Radio Cards Yes/No -->
+          <ul class="question__cards flex--wrap">
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="188">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>A</span>
+                </div>
+                <div class="question__key-text">
+                  Yes
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="189">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>B</span>
+                </div>
+                <div class="question__key-text">
+                  No
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="question grid__third">
+          <label>When
+            <strong>weaned</strong>?</label>
+          <div class="flex question__input question__datepicker">
+            <img src="img/icons-calendar-small.svg" alt="Datepicker">
+            <input type="text" tabindex="190">
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__third">
+          <label>Was this child
+            <strong>bottle-fed</strong>?</label>
+          <!-- Radio Cards Yes/No -->
+          <ul class="question__cards flex--wrap">
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="191">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>A</span>
+                </div>
+                <div class="question__key-text">
+                  Yes
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="192">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>B</span>
+                </div>
+                <div class="question__key-text">
+                  No
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="question grid__third">
+          <label>When
+            <strong>weaned</strong>?</label>
+          <div class="flex question__input question__datepicker">
+            <img src="img/icons-calendar-small.svg" alt="Datepicker">
+            <input type="text" tabindex="193">
+          </div>
+        </div>
+      </div>
+      <div class="question">
+        <label>When was this child
+          <strong>toilet trained</strong> ?</label>
+        <div class="flex">
+          <div class="flex grid__half question__input question__datepicker">
+            <img src="img/icons-calendar-small.svg" alt="Datepicker">
+            <input type="text" placeholder="Days:" tabindex="194">
+          </div>
+          <div class="flex grid__half question__input question__datepicker">
+            <img src="img/icons-calendar-small.svg" alt="Datepicker">
+            <input type="text" placeholder="Nights:" tabindex="195">
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__third">
+          <label>Did
+            <strong>bed-wetting</strong> occur after toilet training?</label>
+          <!-- Radio Cards Yes/No -->
+          <ul class="question__cards flex--wrap">
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="196">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>A</span>
+                </div>
+                <div class="question__key-text">
+                  Yes
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="197">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>B</span>
+                </div>
+                <div class="question__key-text">
+                  No
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="question grid__third">
+          <label>If yes, until what age?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="198">
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__third">
+          <label>Did
+            <strong>bed-soiling</strong> occur after toilet training?</label>
+          <!-- Radio Cards Yes/No -->
+          <ul class="question__cards flex--wrap">
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="199">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>A</span>
+                </div>
+                <div class="question__key-text">
+                  Yes
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="200">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>B</span>
+                </div>
+                <div class="question__key-text">
+                  No
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="question grid__third">
+          <label>If yes, until what age?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="201">
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="question grid__half">
+          <label>Were there any
+            <strong>medical reasons</strong> for bed-wetting or bed-soiling?</label>
+          <!-- Radio Cards Yes/No -->
+          <ul class="question__cards flex--wrap">
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="202">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>A</span>
+                </div>
+                <div class="question__key-text">
+                  Yes
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+            <li class="question__card question__radio flex--col flex--center-vertical flex--space-between" onclick="tcTickSelected(this)"
+              tabindex="203">
+              <input type="hidden" name="value" value="Male" autocomplete="off">
+              <div class="question__tick-wrap">
+                <i class="material-icons question__tick">check</i>
+              </div>
+              <div class="question__key-label flex flex--center-vertical">
+                <div class="question__key">
+                  <span>B</span>
+                </div>
+                <div class="question__key-text">
+                  No
+                </div>
+              </div>
+              <div class="question__bg"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="question grid__half">
+          <label>If yes, please describe?</label>
+          <div class="flex question__input">
+            <input type="text" tabindex="204">
+          </div>
+        </div>
+      </div>
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
+          </div>
+        </div>
+        <span>Press enter</span>
+      </div>
+    </section>
 
   </div>
   <script src="js/script.js"></script>

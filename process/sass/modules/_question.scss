@@ -1,6 +1,8 @@
+.question.grid__quarter,
+.question.grid__third,
 .question.grid__half,
-.question.grid__three-quarters,
-.question.grid__quarter {
+.question.grid__two-thirds,
+.question.grid__three-quarters {
   min-height: 104px;
   padding-right: 9px;
 }
@@ -142,6 +144,10 @@
       outline: 1px dotted gray;
     }
 
+    li.question__card--vertical-center {
+      justify-content: center;
+    }
+
     li.question__card {
       cursor: pointer;
       margin-right: 9px;
@@ -251,6 +257,12 @@
       .question__bg {
         background-color: transparent;
       }
+    }
+  }
+
+  ul.question__cards.question__cards--full-width {
+    > li {
+      flex: 1 1 100%;
     }
   }
 }

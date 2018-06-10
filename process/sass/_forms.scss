@@ -1,4 +1,32 @@
 //Form elements, Inputs, Labels, etc.
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background: 0 0;
+  border: 0;
+  overflow: visible;
+  -webkit-appearance: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
 label {
   display: block;
   @include font-size(2.8);
