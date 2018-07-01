@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CMS | Add Test | Version 1.0 | One Neuro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="grid">
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+    <div class="grid-line grid-line--visible "></div>
+  </div>
+  <div id="page-trans"></div>
+  <header>
+    <nav class="nav">
+      <div class="nav__exterior">
+        <button class="nav__burger" onclick="menuToggle()">
+          <span class="line--1"></span>
+          <span class="line--2"></span>
+          <span class="line--3"></span>
+          <div class="nav__burger__label">MENU</div>
+        </button>
+      </div>
+      <div class="nav__interior">
+        <ul class="nav__interior__items">
+          <li class="nav__item">
+            <a href="">
+              <span class="nav__item--main type--a2 type--uppercase">Import</span>
+            </a>
+            <div class="nav__item__description">
+              <span>
+                <img src="img/icons-import.svg" alt="Import">
+              </span>
+            </div>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              <span class="nav__item--main type--a2 type--uppercase">Make a PDF</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              <span class="nav__item--main type--a2 type--uppercase">Print</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              <span class="nav__item--main type--a2 type--uppercase">New report</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="content">
+    <div class="col content__header">
+      <h1>
+        <strong>Add</strong> a test to the database</h1>
+      <p class="grid__half">Hello! Please fill out all fields (they're required) below to add a Domain-based Report to the system.</p>
+    </div>
+
+    <div class="col question">
+      <div class="question__select">
+        <label>Which
+          <strong>Domain</strong> is this test for?</label>
+        <select class="material-hidden">
+          <option>Academics</option>
+          <option>Adaptive Functioning</option>
+          <option>Appendix of Scores only (Gifted Talented testing)</option>
+          <option>Attention &amp; Executive Function</option>
+          <option>Behavioral observations</option>
+          <option>Effort Testing</option>
+          <option>Executive Functioning</option>
+          <option>Fluid Reasoning</option>
+          <option>General Intellectual Functioning</option>
+          <option>Intelligence/Cognition</option>
+          <option>Learning &amp; Memory</option>
+          <option>Letter of Incomplete Assessment</option>
+          <option>School Observations</option>
+          <option>Sensorimotor Functioning and Visual-Motor Integration</option>
+          <option>Social-Emotional Functioning</option>
+          <option>Social, Emotional, and Adaptive Functioning</option>
+          <option>Sustained Attention/Inhibition</option>
+          <option>Speed of Processing</option>
+          <option>Verbal and Language</option>
+          <option>Visual-Motor Integration</option>
+          <option>Visual-Spatial and Visual-Motor Skills</option>
+        </select>
+        <div class="select">
+          <div class="select-value select-placeholder">
+            <span>Select a domain</span>
+            <span class="select-icon"></span>
+          </div>
+          <div class="select-menu-wrapper">
+            <div class="select-menu">
+              <div class="menu-content">
+                <div class="option">1</div>
+                <div class="option">2</div>
+                <div class="option">3</div>
+                <div class="option">4</div>
+                <div class="option">5</div>
+                <div class="option">6</div>
+                <div class="option">7</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question__text question--error">
+        <label>Test
+          <strong>name</strong>?</label>
+        <input type="text" tabindex="2">
+        <div class="question__validation">
+          <span>Please enter a name</span>
+        </div>
+      </div>
+
+      <div class="question__text">
+        <label for="test-abbreviation">Test
+          <strong>abbreviation</strong>?</label>
+        <input name="test-abbreviation" type="text" tabindex="3">
+        <div class="question__validation">
+          <span>Please enter an abbreviation</span>
+        </div>
+      </div>
+
+      <div class="question__textarea">
+        <label for="test-desc">Test
+          <strong>description</strong>?</label>
+        <textarea name="test-desc" id="test-name" tabindex="4"></textarea>
+        <div class="question__validation">
+          <span>Please enter a description</span>
+        </div>
+      </div>
+
+      <div class="question__textarea">
+        <label for="test-composite-score-desc">Composite score
+          <strong>description</strong>?</label>
+        <textarea name="test-composite-score-desc" id="test-composite-score-desc" tabindex="5"></textarea>
+        <div class="question__validation">
+          <span>Please enter a composite score description</span>
+        </div>
+      </div>
+
+      <div class="question__text disabled">
+        <label for="composite-scre">Composite
+          <strong>score</strong> (leave blank)</label>
+        <input name="composite-score" type="text" tabindex="6" readonly>
+        <div class="question__validation">
+          <span>Please enter a composite score</span>
+        </div>
+      </div>
+
+      <div class="question__textarea question--add-another">
+        <label for="test-composite-score-bullet">Composite score
+          <strong>bullet point</strong>?</label>
+        <textarea name="test-composite-score-bullet" id="test-composite-score-bullet" rows="5" tabindex="7"></textarea>
+        <div class="question__validation">
+          <span>Please enter a composite score bullet point</span>
+        </div>
+      </div>
+
+      <!-- Add another button -->
+      <div class="flex--center-vertical add-another-wrap">
+        <i class="material-icons">
+          arrow_forward
+        </i>
+        <div class="add-another">
+          <span>Add another bullet point</span>
+        </div>
+      </div>
+
+      <div class="question__text">
+        <label for="test-category">Test
+          <strong>category</strong>?</label>
+        <input name="test-category" type="text" tabindex="8">
+        <div class="question__validation">
+          <span>Please enter a test category</span>
+        </div>
+      </div>
+
+      <div class="question__text">
+        <label for="test-subtest-category">Subtest
+          <strong>category</strong>?</label>
+        <input name="test-subtest-category" type="text" tabindex="9">
+        <div class="question__validation">
+          <span>Please enter a subtest category</span>
+        </div>
+      </div>
+
+      <div class="question__text">
+        <label for="test-subtest-name">Subtest
+          <strong>name</strong>?</label>
+        <input name="test-subtest-name" type="text" tabindex="10">
+        <div class="question__validation">
+          <span>Please enter a subtest name</span>
+        </div>
+      </div>
+
+      <div class="question__textarea question--add-another">
+        <label for="test-subtest-desc">
+          <strong>Subtest</strong> description?</label>
+        <textarea name="test-subtest-desc" id="test-subtest-desc" rows="5" tabindex="11"></textarea>
+        <div class="question__validation">
+          <span>Please enter a subtest description</span>
+        </div>
+      </div>
+
+      <!-- Add another button -->
+      <div class="flex--center-vertical add-another-wrap">
+        <i class="material-icons">
+          arrow_forward
+        </i>
+        <div class="add-another">
+          <span>Add another bullet point</span>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="btn-wrap flex--center-vertical">
+        <div class="btn">
+          <div class="btn__hover"></div>
+          <div class="btn__text flex--space-between">
+            <span>Ok</span>
+            <i class="material-icons">check</i>
+          </div>
+        </div>
+        <span>Press enter</span>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

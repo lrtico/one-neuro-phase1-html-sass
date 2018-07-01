@@ -116,6 +116,7 @@ input:checked + label::before {
 textarea {
   background-color: transparent;
   border: none;
+  border-bottom: 1px solid #aaa;
   padding: 9px;
   width: 100%;
 }
@@ -292,4 +293,33 @@ form.container__offset {
 
 li > .cardRadioButton:nth-child(even) {
   margin-bottom: 18px;
+}
+
+// Validation
+.question__validation {
+  color: #fd075e;
+  font-family: "Montserrat", sans-serif;
+  @include font-size(1.25);
+  height: 20px;
+  line-height: 1em;
+  overflow: hidden;
+  padding-right: 5px;
+  position: relative;
+  width: 100%;
+
+  > span {
+    display: block;
+    position: absolute;
+    top: -36px;
+    left: 0;
+    transition: all 250ms ease-in-out;
+  }
+}
+
+.question--error {
+  .question__validation {
+    > span {
+      top: 9px;
+    }
+  }
 }

@@ -29,9 +29,9 @@
   > .select-value {
     -webkit-align-items: center;
     align-items: center;
-    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #aaaaaa;
     border-radius: 2px;
-    box-shadow: 0 2px 5px 0 rgba(110, 115, 118, 0.3);
     box-sizing: content-box;
     color: $text-gray;
     display: -webkit-box;

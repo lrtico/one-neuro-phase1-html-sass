@@ -1,0 +1,43 @@
+.content {
+  .content__header {
+    margin-bottom: 45px;
+
+    > h1 {
+      @include font-size(5.4);
+      font-weight: normal;
+      margin-bottom: 9px;
+    }
+  }
+  .question {
+    > .question__text,
+    > .question__select,
+    > .question__textarea {
+      margin-bottom: 54px;
+      position: relative;
+    }
+    .question__text.disabled {
+      label {
+        color: #aaa;
+      }
+      input {
+        cursor: default;
+      }
+      input:focus {
+        border-bottom-color: #aaa;
+      }
+    }
+    > .question--add-another {
+      margin-bottom: 9px;
+    }
+    label {
+      color: #00414d;
+    }
+    input {
+      padding: 9px;
+    }
+    .add-another-wrap {
+      color: #a3a3a3;
+      margin-bottom: 54px;
+    }
+  }
+}
