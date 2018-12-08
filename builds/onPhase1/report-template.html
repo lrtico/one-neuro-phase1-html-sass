@@ -1,0 +1,1832 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>One Neuro HTML Template | version 1</title>
+</head>
+
+<body id="html-pdf-template" class="pdf-t">
+  <header id="header" class="flex flex--center-vertical">
+    <img src="{% template_image_url on_printed_report_logo %}" alt="logo">
+    <div style="margin-left:.3in;">
+      <div>
+        <span>Phone +1 (310) 207-1720</span>
+        <span class="header-footer__slash">/</span>
+        <span>Fax +1 (310) 207-1638</span>
+      </div>
+      <div>
+        <span>11633 San Vincente Blvd. #106</span>
+        <span class="header-footer__slash">/</span>
+        <span>hello@oneneuro.com</span>
+        <span>www.oneneuro.com</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <h1>Confidential Neuropsychological Evaluation</h1>
+    <section>
+      <div>
+        <p>Name: <span>{{ di-name }}</span></p>
+        <p>Date of Birth: <span>{{ di-dateofbirth }}</span></p>
+        <p>Age: <span>{{ di-age }}</span></p>
+      </div>
+      <div>
+        <p>Place of Evaluation: <span>{{ di-evaluationlocation }}</span></p>
+        <p>Date(s) of Evaluation: <span>{{ di-dateoftesting }}</span></p>
+        <p>Evaluator: <span>{{ di-evaluator }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h2>Person Answering Questions</h2>
+      <div>
+        <p>Name: <span>{{ paq-name }}</span></p>
+        <p>Relationship to the child: <span>{{ paq-guardian }}</span></p>
+        <p>Cell phone: <span>{{ paq-cell-phone }}</span></p>
+      </div>
+      <div>
+        <p>Address: <span>{{ paq-address }}</span></p>
+        <p>Home phone: <span>{{ paq-home-phone }}</span></p>
+        <p>Work phone: <span>{{ paq-work-phone }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h2>Reason for Referral</h2>
+      <ul>
+        <li>{{ reason-referral-1 }}</li>
+        <li>{{ reason-referral-2 }}</li>
+        <li>{{ reason-referral-3 }}</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Records Reviewed</h2>
+      <ul>
+        <!-- Add loop through an object logic -->
+        {% for rec in records-reviewed %}
+        <li>{{ rec.records-reviewed.title }}</li>
+        <li>{{ rec.records-reviewed.date }}</li>
+        {% endfor %}
+        <!-- /end loop logic -->
+      </ul>
+    </section>
+    <section>
+      <h2>Background Information</h2>
+      <p><em>The following background information was obtained from a clinical interview with {{ di-evaluator }}.</em></p>
+      <h3>Mother</h3>
+      <div>
+        <p>Name: <span>{{ bh-mother-name }}</span></p>
+        <p>Relationship: <span>{{ bh-stepmother }}</span></p>
+        <p>Cell phone: <span>{{ bh-mother-cell-phone }}</span></p>
+        <p>Occupation: <span>{{ bh-mother-occupation }}</span></p>
+        <p>Years: <span>{{ bh-mother-length-employement }}</span></p>
+        <p>Primary language: <span>{{ bh-mother-primary-language }}</span></p>
+      </div>
+      <div>
+        <p>Age: <span>{{ bh-mother-age }}</span></p>
+        <p>Home phone: <span>{{ bh-mother-home-phone }}</span></p>
+        <p>Work phone: <span>{{ bh-mother-work-phone }}</span></p>
+        <p>Employer: <span>{{ bh-mother-employer }}</span></p>
+        <p>Highest grade: <span>{{ bh-mother-highest-grade }}</span></p>
+        <p>Secondary language: <span>{{ bh-mother-secondary-language }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h3>Father</h3>
+      <div>
+        <p>Name: <span>{{ bh-father-name }}</span></p>
+        <p>Relationship: <span>{{ bh-stepfather }}</span></p>
+        <p>Cell phone: <span>{{ bh-father-cell-phone }}</span></p>
+        <p>Occupation: <span>{{ bh-father-occupation }}</span></p>
+        <p>Years: <span>{{ bh-father-length-employement }}</span></p>
+        <p>Primary language: <span>{{ bh-father-primary-language }}</span></p>
+      </div>
+      <div>
+        <p>Age: <span>{{ bh-father-age }}</span></p>
+        <p>Home phone: <span>{{ bh-father-home-phone }}</span></p>
+        <p>Work phone: <span>{{ bh-father-work-phone }}</span></p>
+        <p>Employer: <span>{{ bh-father-employer }}</span></p>
+        <p>Highest grade: <span>{{ bh-father-highest-grade }}</span></p>
+        <p>Secondary language: <span>{{ bh-father-secondary-language }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h2>Childcare Information</h2>
+      <div>
+        <p>Who takes care of this child if the caregivers are gone? <span>{{ cc-caregiver-gone }}</span></p>
+        <p>How many hours per day is this child in a childcare setting? <span>{{ cc-hours-per-day }}</span></p>
+        <p>How man different people care for this child? <span>{{ cc-different-people }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h2>Family History</h2>
+      <div>
+        <p>Is this child closer to one parent than the other? <span>{{ fh-closeness }}</span></p>
+        {% if fh-closeness == 'Yes' %}
+        <p>If yes, which one? <span>{{ fh-parental-closeness-choice }}</span></p>
+        {% endif %}
+        <p>Has this child ever experienced any parental separations, divorces, or deaths? <span>{{ fh-experienced }}</span></p>
+        {% if fh-experienced == 'Yes' %}
+        <p>If yes, when? <span>{{ fh-life-experiences-date }}</span></p>
+        <p>Child's age at the time? <span>{{ fh-life-experiences-age }}</span></p>
+        <p>Please describe the circumstances. <span>{{ fh-life-experiences-details }}</span></p>
+        {% endif %}
+        <p>Who has custody of this child? <span>{{ fh-custody }}</span></p>
+        <p>How often does one parent see this child? <span>{{ fh-visitation }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h3>Brothers &amp; Sisters</h3>
+      <ul>
+        <!-- Add loop through an object logic -->
+        {% for sib in brothers-sisters %}
+        <li>
+          <p>
+            <span>{{ sib.brothers-sisters.gender }}, </span>
+            <span>{{ sib.brothers-sisters.age }}, </span>
+            <span>{{ sib.brothers-sisters.home }}</span>
+          </p>
+        </li>
+        {% endfor %}
+        <!-- /end loop logic -->
+      </ul>
+      <div>
+        <p>How does this child get along with brother(s) and/or sister(s)? <span>{{ bs-get-along }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h2>Child’s Residence</h2>
+      <div>
+        <p>Where does this child live? <span>{{ cr-residence }}</span></p>
+        <p>How many years living at the current address? <span>{{ cr-residence-length }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h2>Family Residence</h2>
+      <div>
+        <p>All the activities in which this child often participates with the family is:</p>
+      </div>
+      <ul>
+        <!-- If boolean value (checkbox) is true, show the option's text: -->
+        {% if fr-movies == true %}
+        <li>Movies</li>
+        {% endif %}
+
+        {% if fr-games == true %}
+        <li>Games</li>
+        {% endif %}
+
+        {% if fr-meals == true %}
+        <li>Meals</li>
+        {% endif %}
+      </ul>
+      <div>
+        <p>What’s the language spoken at home? <span>{{ fr-spoken-language }}</span></p>
+        <p>How frequently does this child see grandparents? <span>{{ fr-grandparent-frequency }}</span></p>
+        <p>What do you most enjoy about this child? <span>{{ fr-enjoy }}</span></p>
+        <p>What do you find most difficult about raising this child? <span>{{ fr-difficult }}</span></p>
+        <p>What would you like this child to be when he grows up? <span>{{ fr-career }}</span></p>
+        <p>What level of education do you hope this child will complete? <span>{{ fr-education-level }}</span></p>
+        <p>Who is mainly in charge of discipline in the home? <span>{{ fr-disciplinarian }}</span></p>
+        <p>Do all caregivers agree on discipline? <span>{{ fr-agree-discipline }}</span></p>
+        <p>Please describe discipline techniques? <span>{{ fr-discipline-techniques }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h2>Medical & Development History</h2>
+      <h3>PREGNANCY</h3>
+      <div>
+        <p>Was this child a planned pregnancy? <span>{{ mdh-planned-pregnancy }}</span></p>
+        <p>Was the mother under doctor’s care? <span>{{ mdh-dr-care }}</span></p>
+        <p>The number of previous pregnancies/miscarriages? <span>{{ mdh-total-pregnancies }}</span></p>
+        <p>Complications that occurred during pregnancy:</p>
+      </div>
+      <ul>
+        <li>{{ mdh-pregnancy-difficult-conception }}</li>
+        <li>{{ mdh-pregnancy-toxemia }}</li>
+        <li>{{ mdh-pregnancy-weight-gain }}</li>
+        <li>{{ mdh-pregnancy-vomiting }}</li>
+        <li>{{ mdh-pregnancy-german-measels }}</li>
+        <li>{{ mdh-pregnancy-swelling }}</li>
+        <li>{{ mdh-pregnancy-emotional }}</li>
+        <li>{{ mdh-pregnancy-vaginal-bleeding }}</li>
+        <li>{{ mdh-pregnancy-flu }}</li>
+        <li>{{ mdh-pregnancy-anemia }}</li>
+        <li>{{ mdh-pregnancy-blood-pressure }}</li>
+        <li>{{ mdh-pregnancy-other }}</li>
+        <li>{{ mdh-pregnancy-injury }}</li>
+      </ul>
+    </section>
+    <section>
+      <h3>BIRTH</h3>
+      <div>
+        <p>At this child’s birth, what was the mother’s age? <span>{{ mdh-mothers-age }}</span></p>
+        <p>Father’s? <span>{{ mdh-fathers-age }}</span></p>
+        <p>Mother’s age at birth of first child: <span>{{ mdh-mothers-age-first-child }}</span></p>
+        <p>Was this child born in a hospital? <span>{{ mdh-birth-location }}</span></p>
+        <p>Length of pregnancy: <span>{{ mdh-pregnancy-length }}</span></p>
+        <p>Birth weight: <span>{{ mdh-birth-weight }}</span></p>
+        <p>Length of labor: <span>{{ mdh-labor-length }}</span></p>
+        <p>Apgar score: <span>{{ mdh-apgar-score }}</span></p>
+        <p>Child’s condition at birth: <span>{{ mdh-birth-condition-child }}</span></p>
+        <p>Mother’s condition at birth: <span>{{ mdh-birth-condition-mother }}</span></p>
+        <p>Complications that occurred during birth:</p>
+        <ul>
+          <!-- If boolean value (checkbox) is true, show the option's text: -->
+          {% if test.mdh-forceps == true %}
+          <li>Forceps</li>
+          {% endif %}
+
+          {% if test.mdh-breech == true %}
+          <li>Breech birth</li>
+          {% endif %}
+
+          {% if test.mdh-induced == true %}
+          <li>Labor induced</li>
+          {% endif %}
+
+          {% if test.mdh-ceasarean == true %}
+          <li>Ceasarean</li>
+          {% endif %}
+        </ul>
+        <p>Other deliver complications: <span>{{ mdh-delivery-complications }}</span></p>
+        <p>Incubator: <span>{{ mdh-incubator }}</span></p>
+        <p>Jaundiced: <span>{{ mdh-jaundiced }}</span></p>
+        <p>Breathing problems right after birth? <span>{{ mdh-breathing-problems }}</span></p>
+        <p>Supplemental oxygen? <span>{{ mdh-supplemental-oxygen }}</span></p>
+        <p>Was anethesia used during delivery? If so, what kind? {{ mdh-anethesia }}</p>
+        <p>Mother's length of hospital stay? {{ mdh-mother-length-hospital }}</p>
+        <p>Child's length of hospital stay? {{ mdh-child-length-hospital }}</p>
+        <p>Were there any complications that occured during pregnancy?</p>
+        <ul>
+          <li>{{ mdh-maternal-injury-description }}</li>
+          <li>{{ mdh-other-complication-description }}</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2>Development</h2>
+      <div>
+        <p>At what age did this child first do the following?</p>
+      </div>
+      <ul>
+        <li>
+          <p><em>Turn over: </em><span>{{ mdh-turn-over }}</span></p>
+        </li>
+        <li>
+          <p><em>Walk down stairs: </em><span>{{ mdh-walk-down-stairs }}</span></p>
+        </li>
+        <li>
+          <p><em>Sit alone: </em><span>{{ mdh-sit-alone }}</span></p>
+        </li>
+        <li>
+          <p><em>Show interest in or attraction to sound: </em><span>{{ mdh-attracted-sound }}</span></p>
+        </li>
+        <li>
+          <p><em>Crawl: </em><span>{{ mdh-crawl }}</span></p>
+        </li>
+        <li>
+          <p><em>Understand first words: </em><span>{{ mdh-understand-words }}</span></p>
+        </li>
+        <li>
+          <p><em>Stand alone: </em><span>{{ mdh-stand-alone }}</span></p>
+        </li>
+        <li>
+          <p><em>Speak first words: </em><span>{{ mdh-speak-first-words }}</span></p>
+        </li>
+        <li>
+          <p><em>Walk alone: </em><span>{{ mdh-walk-alone }}</span></p>
+        </li>
+        <li>
+          <p><em>Speak in sentences: </em><span>{{ mdh-speak-sentences }}</span></p>
+        </li>
+        <li>
+          <p><em>Walk up stairs: </em><span>{{ mdh-walk-up-stairs }}</span></p>
+        </li>
+      </ul>
+      <h3>EARLY YEARS</h3>
+      <div>
+        <p>Was this child breast-fed? <span>{{ mdh-breast-fed }}</span></p>
+        {% if mdh-breast-fed == 'Yes' %}
+        <p>When weaned? <span>{{ mdh-breast-fed-weaned }}</span></p>
+        {% endif %}
+        <p>Was this child bottle-fed? <span>{{ mdh-bottle-fed }}</span></p>
+        {% if mdh-bottle-fed == 'Yes' %}
+        <p>When weaned? <span>{{ mdh-bottle-fed-weaned }}</span></p>
+        {% endif %}
+        <p>When was this child toilet trained?</p>
+        <ul>
+          <li>
+            <p><em>Days: </em><span>{{ mdh-toilet-trained-day }}</span></p>
+          </li>
+          <li>
+            <p><em>Nights: </em><span>{{ mdh-toilet-trained-night }}</span></p>
+          </li>
+        </ul>
+        <p>Did bed-wetting occur after toilet training? <span>{{ mdh-bed-wetting }}</span></p>
+        {% if mdh-bed-wetting == 'Yes' %}
+        <p>If yes, until what age? <span>{{ mdh-bed-wetting-stop }}</span></p>
+        {% endif %}
+        <p>Did bed-soiling occur? <span>{{ mdh-bed-soiling }}</span></p>
+        {% if mdh-bed-soiling == 'Yes' %}
+        <p>If yes, until what age? <span>{{ mdh-bed-soiling-stop }}</span></p>
+        {% endif %}
+        <p>Were there medical reasons for bed-wetting or bed-soiling? <span>{{ mdh-bed-wetting-medical-reasons }}</span></p>
+        {% if mdh-bed-wetting-medical-reasons == 'Yes' %}
+        <p>If yes, please describe: <span>{{ mdh-bed-wetting-medical-reasons-description }}</span></p>
+        {% endif %}
+        <p>{{ di-name }} experienced the following problems:</p>
+        <p>During the first four years, {{ di-name }} had the following special problems:</p>
+        <ul>
+          {% if mdh-walking-difficulty.length > 0 %}
+          <li>
+            <p><em>Walking difficulty: </em><span>{{ mdh-walking-difficulty }}</span></p>
+          </li>
+          {% endif %}
+          {% if mdh-unclear-speech.length > 0 %}
+          <li>
+            <p><em>Unclear speech: </em><span>{{ mdh-unclear-speech }}</span></p>
+          </li>
+          {% endif %}
+          {% if mdh-feeding-problem.length > 0 %}
+          <li>
+            <p><em>Feeding problem: </em><span>{{ mdh-feeding-problemy }}</span></p>
+          </li>
+          {% endif %}
+          {% if mdh-underweight-problem.length > 0 %}
+          <li>
+            <p><em>Underweight problem: </em><span>{{ mdh-underweight-problem }}</span></p>
+          </li>
+          {% endif %}
+          {% if mdh-overweight-problem.length > 0 %}
+          <li>
+            <p><em>Overweight problem: </em><span>{{ mdh-overweight-problem }}</span></p>
+          </li>
+          {% endif %}
+          {% if mdh-colic.length > 0 %}
+          <li>
+            <p><em>Colic: </em><span>{{ mdh-colic }}</span></p>
+          </li>
+          {% endif %}
+          {% if mdh-sleep-problem.length > 0 %}
+          <li>
+            <p><em>Sleep problem: </em><span>{{ mdh-sleep-problem }}</span></p>
+          </li>
+          {% endif %}
+          {% if mdh-eating-problem.length > 0 %}
+          <li>
+            <p><em>Eating problem: </em><span>{{ mdh-eating-problem }}</span></p>
+          </li>
+          {% endif %}
+          {% if mdh-learing-ride-bike.length > 0 %}
+          <li>
+            <p><em>Difficulty learning to ride a bike: </em><span>{{ mdh-learing-ride-bike }}</span></p>
+          </li>
+          {% endif %}
+          {% if mdh-learning-skip.length > 0 %}
+          <li>
+            <p><em>Difficulty learning how to skip: </em><span>{{ mdh-learning-skip }}</span></p>
+          </li>
+          {% endif %}
+          {% if mdh-learning-throw-catch.length > 0 %}
+          <li>
+            <p><em>Difficulty learning to throw or catch: </em><span>{{ mdh-learning-throw-catch }}</span></p>
+          </li>
+          {% endif %}
+        </ul>
+        <p>Has this child ever been forced to change writing hand? <span>{{ mdh-change-writing-hand }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h2>Medical History</h2>
+      <div>
+        <p>John has had the following illnesses:</p>
+      </div>
+      <ul>
+        {% if mh-measels.length > 0 %}
+        <li>
+          <p><em>Measels: </em><span>{{ mh-measels }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-rheumatic-fever.length > 0 %}
+        <li>
+          <p><em>Rheumatic fever: </em><span>{{ mh-rheumatic-fever }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-german-measels.length > 0 %}
+        <li>
+          <p><em>German measels: </em><span>{{ mh-german-measels }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-diptheria.length > 0 %}
+        <li>
+          <p><em>Diptheria: </em><span>{{ mh-diptheria }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-mumps.length > 0 %}
+        <li>
+          <p><em>Mumps: </em><span>{{ mh-mumps }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-understand-words.length > 0 %}
+        <li>
+          <p><em>Understand first words: </em><span>{{ mh-understand-words }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-meningitis.length > 0 %}
+        <li>
+          <p><em>Meningitis: </em><span>{{ mdh-meningitis }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-chicken-pox.length > 0 %}
+        <li>
+          <p><em>Chicken pox: </em><span>{{ mh-chicken-pox }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-encephalitis.length > 0 %}
+        <li>
+          <p><em>Encephalitis: </em><span>{{ mh-encephalitis }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-tuberculosis.length > 0 %}
+        <li>
+          <p><em>Tuberculosis: </em><span>{{ mh-tuberculosis }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-anemia.length > 0 %}
+        <li>
+          <p><em>Anemia: </em><span>{{ mh-anemia }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-whooping-cough.length > 0 %}
+        <li>
+          <p><em>Whooping cough: </em><span>{{ mh-whooping-cough }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-fever-104.length > 0 %}
+        <li>
+          <p><em>Fever above 104&deg;: </em><span>{{ mh-fever-104 }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-scarlet-fever.length > 0 %}
+        <li>
+          <p><em>Scarlet fever: </em><span>{{ mh-scarlet-fever }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-broken-bones.length > 0 %}
+        <li>
+          <p><em>Broken bones: </em><span>{{ mh-broken-bones }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-concussion.length > 0 %}
+        <li>
+          <p><em>Concussion: </em><span>{{ mh-concussion }}</span></p>
+        </li>
+        {% endif %}
+        {% if mh-coma-loss-consciousness.length > 0 %}
+        <li>
+          <p><em>Coma or loss of consiousness: </em><span>{{ mh-coma-loss-consciousness }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h2>Medical Development</h2>
+      <h3>RESPIRATORY</h3>
+      <ul>
+        {% if md-colds.length > 0 %}
+        <li>
+          <p><em>Frequent colds: </em><span>{{ md-colds }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-chronic-cough.length > 0 %}
+        <li>
+          <p><em>Chronic cough: </em><span>{{ md-chronic-cough }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-asthma.length > 0 %}
+        <li>
+          <p><em>Asthma: </em><span>{{ md-asthma }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-hay-fever.length > 0 %}
+        <li>
+          <p><em>Hay fever: </em><span>{{ md-hay-fever }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-sinus-condition.length > 0 %}
+        <li>
+          <p><em>Sinus condition: </em><span>{{ md-sinus-condition }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h3>CARDIOVASCULAR</h3>
+      <ul>
+        {% if md-physical-exertion.length > 0 %}
+        <li>
+          <p><em>Shortness of breath or dizziness with physical exertion: </em><span>{{ md-physical-exertion }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-activity-limits.length > 0 %}
+        <li>
+          <p><em>Activity limitation due to heart condition: </em><span>{{ md-activity-limits }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-heart-murmur.length > 0 %}
+        <li>
+          <p><em>Heart murmur: </em><span>{{ md-heart-murmur }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h3>GASTROINTESTINAL</h3>
+      <ul>
+        {% if md-vomiting.length > 0 %}
+        <li>
+          <p><em>Excessive vomitting: </em><span>{{ md-vomiting }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-diarrhea.length > 0 %}
+        <li>
+          <p><em>Frequent diarrhea: </em><span>{{ md-diarrhea }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-constipation.length > 0 %}
+        <li>
+          <p><em>Constipation: </em><span>{{ md-constipation }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-stomach-pain.length > 0 %}
+        <li>
+          <p><em>Stomach pain: </em><span>{{ md-stomach-pain }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h3>GENITOURINARY</h3>
+      <ul>
+        {% if md-urination.length > 0 %}
+        <li>
+          <p><em>Urination in pants: </em><span>{{ md-urination }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-pain-urinating.length > 0 %}
+        <li>
+          <p><em>Pain while urinating: </em><span>{{ md-pain-urinating }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-exessive-urination.length > 0 %}
+        <li>
+          <p><em>Excessive urination: </em><span>{{ md-exessive-urination }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-urine-odor.length > 0 %}
+        <li>
+          <p><em>Strong odor to urine: </em><span>{{ md-urine-odor }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h3>MUSCULOSKELETAL</h3>
+      <ul>
+        {% if md-muscle-pain.length > 0 %}
+        <li>
+          <p><em>Muscle pain: </em><span>{{ md-muscle-pain }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-clumsy-walk.length > 0 %}
+        <li>
+          <p><em>Clumsy walk: </em><span>{{ md-clumsy-walk }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-poor-posture.length > 0 %}
+        <li>
+          <p><em>Poor posture: </em><span>{{ md-poor-posture }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-other-muscle-problems.length > 0 %}
+        <li>
+          <p><em>Other muscle problems: </em><span>{{ md-other-muscle-problems }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h3>SKIN</h3>
+      <ul>
+        {% if md-frequent-rashes.length > 0 %}
+        <li>
+          <p><em>Frequent rashes: </em><span>{{ md-frequent-rashes }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-bruises.length > 0 %}
+        <li>
+          <p><em>Bruises easily: </em><span>{{ md-bruises }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-sores.length > 0 %}
+        <li>
+          <p><em>Sores: </em><span>{{ md-sores }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-acne.length > 0 %}
+        <li>
+          <p><em>Severe acne: </em><span>{{ md-acne }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-itchy.length > 0 %}
+        <li>
+          <p><em>Itchy skin: </em><span>{{ md-itchy }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h3>NEUROLOGICAL</h3>
+      <ul>
+        {% if md-seizures.length > 0 %}
+        <li>
+          <p><em>Seizures/ convulsions: </em><span>{{ md-seizures }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-speech-defects.length > 0 %}
+        <li>
+          <p><em>Speech defects: </em><span>{{ md-speech-defects }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-accident-prone.length > 0 %}
+        <li>
+          <p><em>Accident prone: </em><span>{{ md-accident-prone }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-nail-biter.length > 0 %}
+        <li>
+          <p><em>Nail biter: </em><span>{{ md-nail-biter }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-sucks-thumb.length > 0 %}
+        <li>
+          <p><em>Sucks thumb: </em><span>{{ md-sucks-thumb }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-grinds-teeth.length > 0 %}
+        <li>
+          <p><em>Grinds teeth: </em><span>{{ md-grinds-teeth }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-twitches.length > 0 %}
+        <li>
+          <p><em>Has tics/twitches: </em><span>{{ md-twitches }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-bangs-head.length > 0 %}
+        <li>
+          <p><em>Bangs head: </em><span>{{ md-bangs-head }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-rocks.length > 0 %}
+        <li>
+          <p><em>Rocks back and forth: </em><span>{{ md-rocks }}</span></p>
+        </li>
+        {% endif %}
+        {% if md-bowel-movent.length > 0 %}
+        <li>
+          <p><em>Bowel movements in pants/bed: </em><span>{{ md-bowel-movent }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+      <div>
+        <p>Has this child ever taken medication to increase activity? <span>{{ md-neurological-meds }}</span></p>
+        {% if md-neurological-meds == 'Yes' %}
+        <p>If yes, when? <span>{{ md-neurological-meds-date }}</span></p>
+        <p>What medication? <span>{{ md-neurological-meds-kind }}</span></p>
+        {% endif %}
+        <p>Has this child ever taken tranquilizer medication? <span>{{ md-neurological-tranquilizer }}</span></p>
+        {% if md-neurological-tranquilizer == 'Yes' %}
+        <p>If yes, when? <span>{{ md-neurological-tranquilizer-date }}</span></p>
+        <p>What medication? <span>{{ md-neurological-tranquilizer-kind }}</span></p>
+        {% endif %}
+        <p>Has this child ever taken medication for ADD, ADHD, or similar problems? <span>{{ md-neurological-adhd-meds
+            }}</span></p>
+        {% if md-neurological-adhd-meds == 'Yes' %}
+        <p>If yes, when? <span>{{ md-neurological-adhd-meds-date }}</span></p>
+        <p>What medication? <span>{{ md-neurological-adhd-meds-kind }}</span></p>
+        {% endif %}
+      </div>
+    </section>
+    <section>
+      <h3>ALLERGIES</h3>
+      <ul>
+        {% if mdh-allergies-medicine.length > 0 %}
+        <li>
+          <p><em>Allergies to medicine: </em><span>{{ mdh-allergies-medicine }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-allergies-food.length > 0 %}
+        <li>
+          <p><em>Allergies to food: </em><span>{{ mdh-allergies-food }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-allergies-other.length > 0 %}
+        <li>
+          <p><em>Other allergies: </em><span>{{ mdh-allergies-other }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h3>SPEECH</h3>
+      <ul>
+        {% if mdh-speech-stuttering.length > 0 %}
+        <li>
+          <p><em>Stuttering: </em><span>{{ mdh-speech-stuttering }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-speech-unclear.length > 0 %}
+        <li>
+          <p><em>Unclear speech: </em><span>{{ mdh-speech-unclear }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-speech-other.length > 0 %}
+        <li>
+          <p><em>Other speech problems: </em><span>{{ mdh-speech-other }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-speech-exam-date.length > 0 %}
+        <li>
+          <p><em>Date of most recent speech exam: </em><span>{{ mdh-speech-exam-date }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h3>HEARING</h3>
+      <ul>
+        {% if mdh-hearing-ear-infection.length > 0 %}
+        <li>
+          <p><em>Ear infections: </em><span>{{ mdh-hearing-ear-infection }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-hearing-problems.length > 0 %}
+        <li>
+          <p><em>Hearing problems: </em><span>{{ mdh-hearing-problems }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-hearing-tubes.length > 0 %}
+        <li>
+          <p><em>Ear tubes: </em><span>{{ mdh-hearing-tubes }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-hearing-exam-date.length > 0 %}
+        <li>
+          <p><em>Date of most recent hearing exam: </em><span>{{ mdh-hearing-exam-date }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h3>VISION</h3>
+      <ul>
+        {% if mdh-vision-problems.length > 0 %}
+        <li>
+          <p><em>Vision problems: </em><span>{{ mdh-vision-problems }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-glasses.length > 0 %}
+        <li>
+          <p><em>Wears glasses or contacts: </em><span>{{ mdh-glasses }}</span></p>
+        </li>
+        {% endif %}
+        {% if mdh-vision-exam-date.length > 0 %}
+        <li>
+          <p><em>Date of most recent vision exam: </em><span>{{ mdh-vision-exam-date }}</span></p>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+    <section>
+      <h3>MEDICAL CARE</h3>
+      <div>
+        <p><em>What's the doctor's name?</em> <span>{{ mc-dr-name }}</span></p>
+        <p><em>What's the doctor's phone?</em> <span>{{ mc-dr-phone }}</span></p>
+        <p><em>How often do they visit?</em> <span>{{ mc-dr-visit-count }}</span></p>
+        <p><em>Date of last visit?</em> <span>{{ mc-dr-last-visit }}</span></p>
+
+        <!-- Add loop through an object logic -->
+        <p><em>List any medication this child is currently taking:</em></p>
+        <ul>
+          {% for med in medication-list-group %}
+          <li>
+            <p><span>{{ med.mc-medication-name }}, </span><span>{{ med.mc-medication-reason }}</span></p>
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- /end loop logic -->
+
+        <p><em>Has this child ever been sexually abused?</em> <span>{{ mc-sexual-abuse }}</span></p>
+
+        <!-- Add loop through an object logic -->
+        <p><em>Pshycology counseling or therapy this child has had:</em></p>
+        <ul>
+          {% for session in counseling-group %}
+          <li>
+            <p><span>{{ session.mc-counseling-name }}, </span><span>{{ session.mc-counseling-address }}, </span><span>{{
+                session.mc-counseling-phone }}, </span><span>{{ session.mc-counseling-reason }}, </span><span>{{
+                session.mc-counseling-date }}</span></p>
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- /end loop logic -->
+
+        <!-- Add loop through an object logic -->
+        <p><em>Nuerological exam(s) this child has had:</em></p>
+        <ul>
+          {% for session in nuerological-group %}
+          <li>
+            <p><span>{{ session.mc-nuerological-name }}, </span><span>{{ session.mc-nuerological-address }}, </span><span>{{
+                session.mc-nuerological-date }}, </span><span>{{ session.mc-nuerological-reason }}</span></p>
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- /end loop logic -->
+
+        <!-- Add loop through an object logic -->
+        <p><em>Psychology or physciatric exam(s) this child has had:</em></p>
+        <ul>
+          {% for session in psychology-group %}
+          <li>
+            <p><span>{{ session.mc-psychology-exam-name }}, </span><span>{{ session.mc-psychology-exam-city }}, </span><span>{{
+                session.mc-psychology-exam-date }}, </span><span>{{ session.mc-psychology-exam-reason }}</span></p>
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- /end loop logic -->
+      </div>
+    </section>
+    <section>
+      <h2>Family History</h2>
+      <div>
+        <p><em>Family members had the following:</em></p>
+      </div>
+      <ul>
+        {% if fh-drug-abuse == true %}
+        <li>
+          <p>Alcohol/Drug abuse</p>
+        </li>
+        {% endif %}
+        {% if fh-alzheimers == true %}
+        <li>
+          <p>Alzheimers Disease</p>
+        </li>
+        {% endif %}
+        {% if fh-behavior-disorder == true %}
+        <li>
+          <p>Behavior disorder</p>
+        </li>
+        {% endif %}
+        {% if fh-birth-defect == true %}
+        <li>
+          <p>Birth defect</p>
+        </li>
+        {% endif %}
+        {% if fh-cancer == true %}
+        <li>
+          <p>Cancer</p>
+        </li>
+        {% endif %}
+        {% if fh-cerbral-palsy == true %}
+        <li>
+          <p>Cerbral Palsy</p>
+        </li>
+        {% endif %}
+        {% if fh-cystic-fibrosis == true %}
+        <li>
+          <p>Cystic Fibrosis</p>
+        </li>
+        {% endif %}
+        {% if fh-diabetes == true %}
+        <li>
+          <p>Diabetes</p>
+        </li>
+        {% endif %}
+        {% if fh-emotional-disturbance == true %}
+        <li>
+          <p>Emotional disturbance</p>
+        </li>
+        {% endif %}
+        {% if fh-food-allergies == true %}
+        <li>
+          <p>Food allergies</p>
+        </li>
+        {% endif %}
+        {% if fh-heart-disease == true %}
+        <li>
+          <p>Heart disease</p>
+        </li>
+        {% endif %}
+        {% if fh-hemophilia == true %}
+        <li>
+          <p>Hemophilia</p>
+        </li>
+        {% endif %}
+        {% if fh-high-blood-pressure == true %}
+        <li>
+          <p>High blood pressure</p>
+        </li>
+        {% endif %}
+        {% if fh-huntington-chorea == true %}
+        <li>
+          <p>Huntington Chorea</p>
+        </li>
+        {% endif %}
+        {% if fh-intellectual-disability == true %}
+        <li>
+          <p>Intellectual disability</p>
+        </li>
+        {% endif %}
+        {% if fh-kidney-disease == true %}
+        <li>
+          <p>Kidney Disease</p>
+        </li>
+        {% endif %}
+        {% if fh-mental-illness == true %}
+        <li>
+          <p>Mental illness</p>
+        </li>
+        {% endif %}
+        {% if fh-kidney-disease == true %}
+        <li>
+          <p>Kidney Disease</p>
+        </li>
+        {% endif %}
+        {% if fh-migraines == true %}
+        <li>
+          <p>Migraines</p>
+        </li>
+        {% endif %}
+        {% if fh-multiple-sclerosis == true %}
+        <li>
+          <p>Mltiple Sclerosis</p>
+        </li>
+        {% endif %}
+        {% if fh-muscular-dystrophy == true %}
+        <li>
+          <p>Muscular Dystrophy</p>
+        </li>
+        {% endif %}
+        {% if fh-nervousness == true %}
+        <li>
+          <p>Nervousness</p>
+        </li>
+        {% endif %}
+        {% if fh-other-learning-disability == true %}
+        <li>
+          <p>Other learning disability</p>
+        </li>
+        {% endif %}
+        {% if fh-parkinsons == true %}
+        <li>
+          <p>Parkinsons</p>
+        </li>
+        {% endif %}
+        {% if fh-physical-handicap == true %}
+        <li>
+          <p>Physical handicap</p>
+        </li>
+        {% endif %}
+        {% if fh-reading-problem == true %}
+        <li>
+          <p>Reading problem</p>
+        </li>
+        {% endif %}
+        {% if fh-seizures == true %}
+        <li>
+          <p>Seizures</p>
+        </li>
+        {% endif %}
+        {% if fh-severe-head-injury == true %}
+        <li>
+          <p>Severe head injury</p>
+        </li>
+        {% endif %}
+        {% if fh-sickle-cell == true %}
+        <li>
+          <p>Sickle cell</p>
+        </li>
+        {% endif %}
+        {% if fh-speech-problem == true %}
+        <li>
+          <p>Speech problem</p>
+        </li>
+        {% endif %}
+        {% if fh-stroke == true %}
+        <li>
+          <p>Stroke</p>
+        </li>
+        {% endif %}
+        {% if fh-tay-sachs == true %}
+        <li>
+          <p>Tay Sachs</p>
+        </li>
+        {% endif %}
+        {% if fh-tourettes == true %}
+        <li>
+          <p>Tourettes</p>
+        </li>
+        {% endif %}
+        {% if fh-tuberculosis == true %}
+        <li>
+          <p>Tuberculosis</p>
+        </li>
+        {% endif %}
+        {% if fh-other == true %}
+        <li>
+          <p>Other</p>
+        </li>
+        {% endif %}
+      </ul>
+      <p><em>Describe the father’s present health:</em> <span>{{ fh-fathers-health }}</span></p>
+      <p><em>Describe the mother’s present health:</em> <span>{{ fh-mothers-health }}</span></p>
+
+      <!-- Add loop through an object logic -->
+      <p><em>Has anyone in the family ever been in special education?</em></p>
+      <ul>
+        {% for ed in special-ed-group %}
+        <li>
+          <p><span>{{ ed.mc-special-ed-name }}, </span><span>{{ ed.mc-special-ed-class }}</span></p>
+        </li>
+        {% endfor %}
+      </ul>
+      <!-- /end loop logic -->
+    </section>
+    <section>
+      <h2>Friendships</h2>
+
+      <p><em>Does this child have problems relating to or playing with children? </em>
+        {% if f-relating-problems == true %}
+        <span>{{ f-relating-problems-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Does this child fight frequently with playmates? </em>
+        {% if f-fight == true %}
+        <span>{{ f-fight-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Does this child prefer playing with younger children? </em>
+        {% if f-younger-friends == true %}
+        <span>{{ f-younger-friends-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Does this child have difficulty making friends? </em>
+        {% if f-making-friends == true %}
+        <span>{{ f-making-friends-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Does this child prefer to play alone? </em>
+        {% if f-alone == true %}
+        <span>{{ f-alone-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Are there children in the neighborhood with whom this child could play with? </em>
+        {% if f-neighborhood-friends == true %}
+        <span>{{ f-neighborhood-friends-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>What role does this child take in peer group games?</em> <span>{{ f-role-peer-group-games }}</span></p>
+
+      <p><em>Does this child’s friends do any of the following:</em></p>
+      <ul>
+        <li>
+          {% if f-smoke-cigarettes == true %}
+          <span>Yes</span>
+          {% else %}
+          <span>No</span>
+          {% endif %}
+        </li>
+        <li>
+          {% if f-chew-tobacco == true %}
+          <span>Yes</span>
+          {% else %}
+          <span>No</span>
+          {% endif %}
+        </li>
+        <li>
+          {% if f-inhale == true %}
+          <span>Yes</span>
+          {% else %}
+          <span>No</span>
+          {% endif %}
+        </li>
+        <li>
+          {% if f-alcholol == true %}
+          <span>Yes</span>
+          {% else %}
+          <span>No</span>
+          {% endif %}
+        </li>
+        <li>
+          {% if f-drugs == true %}
+          <span>Yes</span>
+          {% else %}
+          <span>No</span>
+          {% endif %}
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Recreation &amp; Interests</h2>
+      <div>
+        <p><em>What sport activities does this child enjoy?</em> <span>{{ ri-activites-sports }}</span></p>
+        <p><em>What hobbies does this child enjoy?</em> <span>{{ ri-activites-hobbies }}</span></p>
+        <p><em>What other activities does this child enjoy?</em> <span>{{ ri-activites-other }}</span></p>
+      </div>
+    </section>
+    <section>
+      <h2>Behavior &amp; Treatment</h2>
+      <p><em>John exhibits the following:</em></p>
+      <ul>
+        {% if bt-overstimulated.length > 0 %}
+        <li>
+          <p>Is easily overstimulated in play</p>
+        </li>
+        {% endif %}
+        {% if bt-attention-span.length > 0 %}
+        <li>
+          <p>Has a short attention span</p>
+        </li>
+        {% endif %}
+        {% if bt-self-control.length > 0 %}
+        <li>
+          <p>Lacks self-control</p>
+        </li>
+        {% endif %}
+        {% if bt-unhappy.length > 0 %}
+        <li>
+          <p>Seems unhappy most of the time</p>
+        </li>
+        {% endif %}
+        {% if bt-affectionless.length > 0 %}
+        <li>
+          <p>Withholds affection</p>
+        </li>
+        {% endif %}
+        {% if bt-hides-feelings.length > 0 %}
+        <li>
+          <p>Hides feelings</p>
+        </li>
+        {% endif %}
+        {% if bt-over-engergetic.length > 0 %}
+        <li>
+          <p>Seems over energetic in play</p>
+        </li>
+        {% endif %}
+        {% if bt-impulsive.length > 0 %}
+        <li>
+          <p>Seems impulsive</p>
+        </li>
+        {% endif %}
+        {% if bt-overreacts-problems.length > 0 %}
+        <li>
+          <p>Overreacts in the face of problems</p>
+        </li>
+        {% endif %}
+        {% if bt-shy.length > 0 %}
+        <li>
+          <p>Uncomfortable meeting new people</p>
+        </li>
+        {% endif %}
+        {% if bt-parental-attention.length > 0 %}
+        <li>
+          <p>Requires a lot of parental attention</p>
+        </li>
+        {% endif %}
+        {% if bt-cannot-calm.length > 0 %}
+        <li>
+          <p>Cannot calm down</p>
+        </li>
+        {% endif %}
+      </ul>
+      <p><em>Does this child have fears?</em> <span>{{ bt-fears }}</span></p>
+      <p><em>What makes this child angry?</em> <span>{{ bt-angry }}</span></p>
+    </section>
+    <section>
+      <h2>Educational History</h2>
+      <h3>PRESCHOOL &amp; DAYCARE</h3>
+      <p><em>Does or did this child attend preschool/daycare? </em>
+        {% if eh-daycare == true %}
+        <span>Yes</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      {% if eh-daycare == true %}
+      <ul>
+        <li>
+          <p>{{ eh-daycare-age }}</p>
+        </li>
+        <li>
+          <p>{{ eh-daycare-time }}</p>
+        </li>
+        <li>
+          <p>{{ eh-daycare-days }}</p>
+        </li>
+        <li>
+          <p>{{ eh-daycare-problems }}</p>
+        </li>
+      </ul>
+      {% endif %}
+
+      <p><em>Does or did this child attend kindergarten </em>?
+        {% if eh-kindergarten == true %}
+        <span>Yes</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      {% if eh-kindergarten == true %}
+      <p><em>Any problems in kindergarten?</em> <span>{{ eh-kindergarten-problems }}</span></p>
+      {% endif %}
+    </section>
+    <section>
+      <h3>ELEMENTARY/HIGH SCHOOL</h3>
+      <p><em>Changed schools for reasons other than normal academic progression? </em>
+        {% if eh-changed-schoolse == true %}
+        <span>{{ eh-changed-schools-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Has been retained a grade in school? </em>
+        {% if eh-repeat-grade == true %}
+        <span>{{ h-grade-repeat-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Has skipped a grade in school? </em>
+        {% if eh-grade-skip == true %}
+        <span>{{ eh-grade-skip-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Does this child have difficulty reading? </em>
+        {% if eh-difficulty-reading == true %}
+        <span>{{ eh-difficulty-reading-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Does this child difficulty with math? </em>
+        {% if eh-difficulty-math == true %}
+        <span>{{ eh-difficulty-math-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Gets poor grades? </em>
+        {% if eh-poor-grades == true %}
+        <span>{{ eh-poor-grades-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Has been tested for special education? </em>
+        {% if eh-special-ed == true %}
+        <span>{{ h-special-ed-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Has been tested for special education? </em>
+        {% if eh-special-ed == true %}
+        <span>{{ h-special-ed-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Currently is placed in special education? </em>
+        {% if eh-special-ed-current == true %}
+        <span>{{ h-special-ed-desc }}</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      {% if eh-special-ed-current == true %}
+      <ul>
+        <li>
+          <p><em>What type of class?</em>{{ eh-type-special-ed-class }}</p>
+        </li>
+        <li>
+          <p><em>Hours per day?</em>{{ eh-type-special-ed-hours }}</p>
+        </li>
+      </ul>
+      {% endif %}
+
+      <p><em>Dislikes going to school? </em>
+        {% if eh-dislikes-school == true %}
+        <span>Yes</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      <p><em>Is absent from school frequently? </em>
+        {% if eh-absent == true %}
+        <span>Yes</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      {% if eh-absent == true %}
+      <p>{{ eh-absent-desc }}</p>
+      {% endif %}
+
+      {% if eh-graduate-hs-desc.length > 0 %}
+      <p><em>{{ di-name }} will graduate high school on </em>{{ eh-graduate-hs-desc }}</p>
+      {% endif %}
+
+      <p><em>Do you have any concerns about the quality of this child's teachers? </em>
+        {% if eh-teacher-concerns == true %}
+        <span>Yes</span>
+        {% else %}
+        <span>No</span>
+        {% endif %}
+      </p>
+
+      {% if eh-teacher-concerns == true %}
+      <p>{{ eh-teacher-concerns-desc }}</p>
+      {% endif %}
+    </section>
+    <section>
+      <h2>Religious &amp; Racial Ethnic Identification</h2>
+      <p><em>Current religious denomination/affiliation:</em></p>
+      <ul>
+        <li>
+          <p>{{ rda-religon-affiliation }}</p>
+        </li>
+        <li>
+          <p>{{ rda-religon-involvement }}</p>
+        </li>
+      </ul>
+
+      <p><em>How important are spirtial concerns in your life? </em> <span>{{ rda-spiritual-importance }}</span></p>
+
+      {% if rda-religon-building.length > 0 %}
+      <p><em>Which, if any, are you involved with:</em></p>
+      <ul>
+        <li>
+          <p>{{ rda-religon-building }}</p>
+        </li>
+      </ul>
+      {% endif %}
+
+      {% if rda-ethnicity.length > 0 %}
+      <p><em>{{ di-name }}'s ethnicity is</em> {{ rda-ethnicity }}</p>
+      {% endif %}
+
+      {% if rda-race.length > 0 %}
+      <p><em>{{ di-name }}'s race is</em> {{ rda-race }}</p>
+      {% endif %}
+
+      {% if rda-idenfication-other.length > 0 %}
+      <p><em>Any other way you identify yourself and consider important?</em> {{ rda-idenfication-other }}</p>
+      {% endif %}
+    </section>
+    <section>
+      <h2>Other Information</h2>
+      <p><em>Is there anything else we should know that doesn't appear on this or other forms, but that is or might be
+          important?</em></p>
+      {% if other-information.length > 0 %}
+      <p>{{ other-information }}</p>
+      {% else %}
+      <p>No</p>
+      {% endif %}
+    </section>
+    <section>
+      <div>
+        <img src="{% template_image_url default_bell_curve %}" alt="Bell curve" />
+      </div>
+      <h2>Test Results</h2>
+      <p>Consistent with common medical practice, ability levels are described statistically. It is important to be
+        aware that mild deficits from a statistical standpoint may interfere significantly with daily functioning.
+        Percentiles are used to describe how many people out of 100 this individual would score above. For example, at
+        the 50th percentile (exactly Average), {{di-name}} would score higher than 50 out of 100 people.</p>
+      <p>The following table is presented below to further describe the statistical classifications, unless otherwise
+        specified (e.g., BASC-3, BRIEF-2, Vineland-3). </p>
+      <p>Please refer to the table below for the numerical results of John’ performance on all of the measures, as well
+        as his classification level.</p>
+      <p>Note for interpretation of test results: these test results are to be interpreted only within the context of
+        this report. They are not to be interpreted independent of this report.</p>
+      <div class="test-table">
+        <div class="table__row table__header">
+          <div>Classification Level</div>
+          <div>% Rank</div>
+          <div>Standard Score</div>
+          <div>Scaled Score</div>
+          <div>T-Score</div>
+        </div>
+        <div class="table__row">
+          <div>Very superior</div>
+          <div>> 98</div>
+          <div>131 & up</div>
+          <div>> 17</div>
+          <div>70</div>
+        </div>
+        <div class="table__row">
+          <div>Superior</div>
+          <div>92-98</div>
+          <div>120-130</div>
+          <div>15-16</div>
+          <div>64-69</div>
+        </div>
+        <div class="table__row">
+          <div>High/Above Average</div>
+          <div>76-91</div>
+          <div>110-119</div>
+          <div>13-14</div>
+          <div>58-63</div>
+        </div>
+        <div class="table__row">
+          <div>Average</div>
+          <div>25-75</div>
+          <div>90-109</div>
+          <div>8-12</div>
+          <div>44-57</div>
+        </div>
+        <div class="table__row">
+          <div>Low/Below Average</div>
+          <div>9-24</div>
+          <div>80-89</div>
+          <div>6-7</div>
+          <div>37-43</div>
+        </div>
+        <div class="table__row">
+          <div>Very Low</div>
+          <div>2-8</div>
+          <div>70-79</div>
+          <div>4-5</div>
+          <div>30-36</div>
+        </div>
+        <div class="table__row">
+          <div>Extremely Low</div>
+          <div>Less than 2</div>
+          <div>Less than 70</div>
+          <div>1-3</div>
+          <div>Less than 30</div>
+        </div>
+      </div>
+      {% if WISC-V == true %}
+      <div class="domain__test">
+        <h3>INTELLIGENCE</h3>
+        <h4 class="h3--sib-h4">WISC-V</h4>
+        <p>Wechsler Intelligence Scale for Children – Fifth Edition is a test of intellectual abilities, which assesses
+          both cognitive strengths and weaknesses in children aged 6 years 0 months through 16 years 11 months
+          (6:0-16:11).</p>
+        <hr>
+        <h5>Full Scale IQ</h5>
+        <p>is a composite score that represents general intellectual functioning and is calculated from all of the
+          subtests within the five main indices: Verbal Comprehension, Visual Spatial, Fluid Reasoning, Working Memory
+          and Processing Speed</p>
+        {% if 1-if-fsiq-is-meaningful == true %}
+        <p>
+          Overall, (client) demonstrated a consistent performance on the WISC-V and received a Full-Scale IQ (FSIQ)
+          score of {{wisc-v-fsiq-score}}
+          ({{ wisc-v-fsiq-percentile }} percentile), which falls within in the {{ wisc-v-fsiq-range }}range when
+          compared to
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          same-aged peers.
+        </p>
+        {% else %}
+        <p>
+          Overall, {{ di-name }} demonstrated an inconsistent performance on the WISC-V. As a result,
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          Full-Scale score cannot be interpreted meaningfully due to the significant discrepancies between the five
+          Composite areas that constitute
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          Full-Scale score (FSIQ). Therefore, in order to better understand
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          cognitive strengths and weaknesses, a more in-depth look at all of {{ di-name }}'s individual subtest scores
+          is warranted.
+        </p>
+        <h5>GENERAL ABILITY INDEX</h5>
+        <p>is a composite score that provides an estimate of general intellectual ability, with reduced emphasis on
+          working memory and processing speed relative to the FSIQ. Client scored a {{ gia-score }}.</p>
+        {% endif %}
+        <hr />
+        <h6>Intellectual Functioning</h6>
+        {% if 1-verbal-comprehension == true %}
+        <h5>VERBAL COMPREHENSION</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Similarities</div>
+            <div>{{ 1-similarities-score }}</div>
+            <div>The subtest is designed to measure verbal concept formation and abstract reasoning. It also involves
+              crystallized intelligence, word knowledge, cognitive flexibility, auditory comprehension, long-term
+              memory, associative and categorical thinking, distinction between nonessential and essential features,
+              and verbal expression.</div>
+          </div>
+          <div class="table__row">
+            <div>Vocabulary</div>
+            <div>{{ 2-vocabulary-score }}</div>
+            <div>The subtest is designed to measure word knowledge and verbal concept formation. It also measures
+              crystallized intelligence, fund of knowledge, learning ability, verbal expression, long-term memory, and
+              degree of vocabulary development.</div>
+          </div>
+          <div class="table__row">
+            <div>Information</div>
+            <div>{{ 3-information-score }}</div>
+            <div>This subtest is designed to measure a child’s ability to acquire, retain, and retrieve general factual
+              knowledge. It involves crystallized intelligence, long-term memory, and the ability to retain and
+              retrieve knowledge from the environment and/or formal instruction.</div>
+          </div>
+          <div class="table__row">
+            <div>Comprehension</div>
+            <div>{{ 4-comprehension-score }}</div>
+            <div>It is designed to measure verbal reasoning and conceptualization, verbal comprehension and expression,
+              the ability to evaluate and use past experience, and the ability to demonstrate practical knowledge and
+              judgement. It also involved crystallized intelligence, knowledge of conventional standards of behavior,
+              social judgement, long-term memory and common sense.</div>
+          </div>
+        </div>
+        {% endif %}
+        {% if 2-visual-spatial == true %}
+        <h5>VISUAL SPATIAL</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Block Design</div>
+            <div>{{ 5-block-design-score }}</div>
+            <div>The subtest is designed to measure verbal concept formation and abstract reasoning. It also involves
+              crystallized intelligence, word knowledge, cognitive flexibility, auditory comprehension, long-term
+              memory, associative and categorical thinking, distinction between nonessential and essential features,
+              and verbal expression.</div>
+          </div>
+          <div class="table__row">
+            <div>Vocabulary</div>
+            <div>{{ 6-vocabulary-score }}</div>
+            <div>The subtest is designed to measure the ability to analyze and synthesize abstract visual stimuli. It
+              also involved nonverbal concept formation and reasoning, broad visual intelligence, visual perception and
+              organization, simultaneous processing, visual-motor coordination, learning, and the ability to separate
+              figure-ground in visual stimuli.</div>
+          </div>
+        </div>
+        {% endif %}
+        {% if 5-processing-speed == true %}
+        <h5>PROCESSING SPEED</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Coding</div>
+            <div>{{ 14-coding-score }}</div>
+            <div>This subtest measures processing speed, short-term visual memory, procedural and incidental learning
+              ability, psychomotor speed, visual perception, visual-motor coordination, visual scanning ability,
+              cognitive flexibility, attention, concentration, and motivation.</div>
+          </div>
+          <div class="table__row">
+            <div>Symbol Search</div>
+            <div>{{ 15-symbol-search-score }}</div>
+            <div>It involves visual-perceptual and decision-making speed, short-term visual memory, visual-motor
+              coordination, inhibitory control, visual discrimination, psychomotor speed, sustained attention and
+              concentration.</div>
+          </div>
+          <div class="table__row">
+            <div>Cancellation</div>
+            <div>{{ 16-cancellation-score }}</div>
+            <div>This subtest measures rate of test taking, speed of visual-perceptual processing and decision making,
+              visual scanning ability, and visual-perceptual recognition and discrimination.</div>
+          </div>
+        </div>
+        {% endif %}
+        {% if 3-fluid-reasoning == true %}
+        <h5>FLUID REASONING</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Matrix Reasoning</div>
+            <div>{{ 7-matrix-reasoning-score }}</div>
+            <div>The subtest is designed to measure fluid intelligence, broad visual intelligence, classification and
+              spatial ability, knowledge of part-whole relationships, and simultaneous processing.</div>
+          </div>
+          <div class="table__row">
+            <div>Figure Weights</div>
+            <div>{{ 8-figure-weights-score }}</div>
+            <div>The subtest measures quantitative fluid reasoning and induction, as well as emphasized inductive or
+              deductive logic.</div>
+          </div>
+          <div class="table__row">
+            <div>Picture Concepts</div>
+            <div>{{ 9-picture-concepts-score }}</div>
+            <div>The subtest measures fluid and inductive reasoning, visual-perceptual recognition and processing, and
+              conceptual thinking. It also requires visual scanning, working memory, and abstract reasoning.</div>
+          </div>
+          <div class="table__row">
+            <div>Arithmetic</div>
+            <div>{{ 10-arithmetic-score }}</div>
+            <div>The subtest involves mental manipulation, concentration, brief focused attention, working memory,
+              short- and long-term memory, numerical reasoning ability, applied computational ability, and mental
+              alertness. Additionally, it requires sequential processing; fluid, quantitative, and logical reasoning;
+              and quantitative knowledge.</div>
+          </div>
+        </div>
+        {% endif %}
+        {% if 4-working-memory == true %}
+        <h5>WORKING MEMORY</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Digit Span</div>
+            <div>{{ 11-digit-span-score }}</div>
+            <div>Requires cognitive flexibility, mental alertness, brief focused attention, auditory discrimination,
+              and auditory rehearsal. Forward task – measures auditory rehearsal and temporary storage capacity in
+              working memory. Backward task – involves working memory, transformation of information, mental
+              manipulation, and may involve visuospatial imaging. Sequencing task – measures working memory, mental
+              manipulation, and complex sequencing.</div>
+          </div>
+          <div class="table__row">
+            <div>Picture Span</div>
+            <div>{{ 12-picture-span-score }}</div>
+            <div>The subtest measures visual working memory and working memory capacity through the use of semantically
+              meaningful stimuli.</div>
+          </div>
+          <div class="table__row">
+            <div>Letter- Number Sequencing</div>
+            <div>{{ 13-letter--number-sequencing-score }}</div>
+            <div>The subtest involves auditory discrimination, brief focused attention, concentration, registration,
+              and auditory rehearsal. It also measures sequential processing, the ability to compare stimuli based on
+              quantity or alphabetic principles, working memory capacity, and mental manipulation.</div>
+          </div>
+        </div>
+        {% endif %}
+        {% if 17-complimentary-subtests == true %}
+        <h5>COMPLIMENTARY SUBTESTS</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Naming Speed Literacy</div>
+            <div>{{ 73-naming-speed-literacy-score }}</div>
+            <div>This subtest specifically measures the automaticity of visual-verbal associations, which should be
+              well developed in school-age children. This subtest was not designed as a measure of intelligence but to
+              enable clinicians to identify difficulties in cognitive processes associated with academic learning.</div>
+          </div>
+          <div class="table__row">
+            <div>Naming Speed Quality</div>
+            <div>{{ 74-naming-speed-quality-score }}</div>
+            <div>The subtest has tasks similar to the experimental literature that show greater sensitivity to
+              mathematics skills and specific learning disorder-mathematics than do the traditional rapid automatized
+              naming tasks that are more closely associated with reading – and writing – related variables.</div>
+          </div>
+          <div class="table__row">
+            <div>Recognition Symbol Translation</div>
+            <div>{{ 77-recognition-symbol-translation-score }}</div>
+            <div>This subtest measure verbal-visual associative memory or paired associates learning, storage and
+              retrieval fluency and accuracy, and delayed recognition. It is not a measure of intelligence but a
+              measure of cognitive process related to learning.</div>
+          </div>
+          <div class="table__row">
+            <div>Immediate Symbol Translation</div>
+            <div>{{ 75-immediate-symbol-translation-score }}</div>
+            <div>This subtest has tasks similar to Immediate Symbol Translation measure verbal-visual associative
+              memory or paired associates learning, storage, and retrieval fluency and accuracy, and immediate recall.
+              This subtest was not designed as a measure of intelligence but as a measure of cognitive processes that
+              may be interfering with academic learning.</div>
+          </div>
+          <div class="table__row">
+            <div>Delayed Symbol Translation</div>
+            <div>{{ 76-delayed-symbol-translation-score }}</div>
+            <div>This subtest is a cued memory paradigm. Tasks similar to Delayed Symbol Translation measure
+              verbal-visual associative memory or paired associates learning, storage and retrieval fluency and
+              accuracy, and delayed recall. This subtest is not designed as a measure of intelligence but as a measure
+              of cognitive process related to learning difficulties.</div>
+          </div>
+        </div>
+        {% endif %}
+        <h5>SUMMARY</h5>
+        <p>Overall, {{ di-name }}'s performance on the WISC-V provided a snapshot into
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          various cognitive abilities and strengths.
+          {% if di-gender == 'Boy' %}
+          He
+          {% else %}
+          She
+          {% endif %}
+          demonstrated well-developed {{ txtFSIQAbilities }}"> abilities. However,
+          {% if di-gender == 'Boy' %}
+          he
+          {% else %}
+          she
+          {% endif %}
+          also evidenced relative challenges with {{ txtFSIQRelatedChallengues }}. These challenges should continue to
+          be monitored and evaluated so as to help
+          {% if di-gender == 'Boy' %}
+          him
+          {% else %}
+          her
+          {% endif %}
+          continue to perform at
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          best.
+        </p>
+      </div>
+      {% endif %}
+    </section>
+  </main>
+  <footer id="footer" class="flex--space-between">
+    <p>
+      <span>{{ di-name }}</span>
+      <span class="header-footer__slash">/</span>
+      <span>Confidential Neuropsychological Evaluation</span>
+    </p>
+    <div class="footer__page-num">
+      <span class="page">#</span>
+    </div>
+  </footer>
+</body>
+
+</html>
