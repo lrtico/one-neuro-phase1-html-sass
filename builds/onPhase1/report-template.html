@@ -4713,7 +4713,7 @@
       {% if DAS-II == true %}
       <div class="domain__test">
         <h3>Intelligence</h3>
-        <h4 class="h3--sib-h4">CTONI-2</h4>
+        <h4 class="h3--sib-h4">DAS-II</h4>
         <p>
           DAS-II is a comprehensive and flexible instrument for assessing the cognitive abilities that are important to the learning processes of children and adolescents from ages 2 years 6 months through 17 years 11 months (2:6-17:11).
         </p>
@@ -5242,7 +5242,7 @@
         </p>
         {% else %}
         <p>
-          Overall, {{ di-name }} demonstrated an inconsistent performance on the WASI-II. As a result,
+          Overall, {{ di-name }} demonstrated an inconsistent performance on the WAIS-IV. As a result,
           {% if di-gender == 'Boy' %}
           his
           {% else %}
@@ -5486,7 +5486,7 @@
         {% endif %}
         
         <h5>SUMMARY</h5>
-        <p>Overall, {{ di-name }}'s performance on the WAIS-II provided a snapshot into
+        <p>Overall, {{ di-name }}'s performance on the WAIS-IV provided a snapshot into
           {% if di-gender == 'Boy' %}
           his
           {% else %}
@@ -5575,13 +5575,13 @@
         </p>
         <h5>Comprehension-Knowledge (Gc)</h5>
         <p>
-            {{ di-name }} demonstrated a relatively {{ 134-wj-iv-cog-comprehension-knowledge-gc-inconsistent-consistent }} performance on the subtests within the Comprehension-Knowledge (Gc) cluster. Specifically, 
+            {{ di-name }} demonstrated a relatively {{ 134-wj-iv-cog-comprehension-knowledge-(gc)-inconsistent-consistent }} performance on the subtests within the Comprehension-Knowledge (Gc) cluster. Specifically, 
             {% if di-gender == 'Boy' %}
             he
             {% else %}
             she
             {% endif %}
-            received a Gc score of {{ 134-wj-iv-cog-comprehension-knowledge-gc-composite-score }} ({{ 134-wj-iv-cog-comprehension-knowledge-gc-composite-percentile }} percentile), which falls within in the {{ 134-wj-iv-cog-comprehension-knowledge-gc-composite-range }}range of functioning compared to other adults 
+            received a Gc score of {{ 134-wj-iv-cog-comprehension-knowledge-(gc)-composite-score }} ({{ 134-wj-iv-cog-comprehension-knowledge-(gc)-composite-percentile }} percentile), which falls within in the {{ 134-wj-iv-cog-comprehension-knowledge-(gc)-composite-range }}range of functioning compared to other adults 
             {% if di-gender == 'Boy' %}
             his
             {% else %}
@@ -5612,20 +5612,20 @@
         </div>
         {% endif %}
 
-        {% if 135-fluid-reasoning-gf == true %}
+        {% if 135-fluid-reasoning-(gf) == true %}
         <h6>Fluid Reasoning (Gf)</h6>
         <p>
             Gf is a composite score that provides an estimate of ability to reason, form concepts, and solve problems using unfamiliar information or novel procedures. Fluid reason requires deliberate and flexible control of attention to solve on the spot problems. 
         </p>
         <h5>Fluid Reasoning (Gf)</h5>
         <p>
-            {{ di-name }} demonstrated a relatively {{ 135-wj-iv-cog-fluid-reasoning-gf-inconsistent-consistent }} performance on the subtests within the Fluid Reasoning (Gf) cluster. Specifically, 
+            {{ di-name }} demonstrated a relatively {{ 135-wj-iv-cog-fluid-reasoning-(gf)-inconsistent-consistent }} performance on the subtests within the Fluid Reasoning (Gf) cluster. Specifically, 
             {% if di-gender == 'Boy' %}
             he
             {% else %}
             she
             {% endif %}
-            received a Gf score of {{ 135-wj-iv-cog-fluid-reasoning-gf-composite-score }} ({{ 135-wj-iv-cog-fluid-reasoning-gf-composite-percentile }} percentile), which falls within in the {{ 135-wj-iv-cog-fluid-reasoning-gf-composite-range }}range of functioning. The Gf cluster measured {{ di-name }}'s ability to reason, form concepts and solve problems using unfamiliar information or novel procedures.
+            received a Gf score of {{ 135-wj-iv-cog-fluid-reasoning-(gf)-composite-score }} ({{ 135-wj-iv-cog-fluid-reasoning-(gf)-composite-percentile }} percentile), which falls within in the {{ 135-wj-iv-cog-fluid-reasoning-(gf)-composite-range }}range of functioning. The Gf cluster measured {{ di-name }}'s ability to reason, form concepts and solve problems using unfamiliar information or novel procedures.
         </p>
         <div class="test-table">
           <div class="table__row table__header">
@@ -5657,20 +5657,20 @@
         </div>
         {% endif %}
 
-        {% if 136-short-term-working-memory-gwm == true %}
+        {% if 136-short-term-working-memory-(gwm) == true %}
         <h6>Short-Term Working Memory (Gwm)</h6>
         <p>
             Gwm is a composite score that provides an estimate of ability to apprehend and hold information in immediate awareness and then use or manipulate it to carry out a goal. 
         </p>
         <h5>Short-Term Working Memory (Gwm)</h5>
         <p>
-            {{ di-name }} demonstrated a relatively {{ 136-wj-iv-cog-short-term-working-memory-gwm-inconsistent-consistent }} performance on the subtests within the Short-Term Working Memory (Gwm) cluster. Specifically, 
+            {{ di-name }} demonstrated a relatively {{ 136-wj-iv-cog-short-term-working-memory-(gwm)-inconsistent-consistent }} performance on the subtests within the Short-Term Working Memory (Gwm) cluster. Specifically, 
             {% if di-gender == 'Boy' %}
             he
             {% else %}
             she
             {% endif %}
-            received a Gf score of {{ 136-wj-iv-cog-short-term-working-memory-gwm-composite-score }} ({{ 136-wj-iv-cog-short-term-working-memory-gwm-composite-percentile }} percentile), which falls within in the {{ 136-wj-iv-cog-short-term-working-memory-gwm-composite-range }}range of functioning. The Gwm cluster measured {{ di-name}}'s ability to apprehend and hold information in immediate awareness and then use or manipulate it.
+            received a Gf score of {{ 136-wj-iv-cog-short-term-working-memory-(gwm)-composite-score }} ({{ 136-wj-iv-cog-short-term-working-memory-(gwm)-composite-percentile }} percentile), which falls within in the {{ 136-wj-iv-cog-short-term-working-memory-(gwm)-composite-range }}range of functioning. The Gwm cluster measured {{ di-name}}'s ability to apprehend and hold information in immediate awareness and then use or manipulate it.
         </p>
         <div class="test-table">
           <div class="table__row table__header">
@@ -5702,20 +5702,20 @@
         </div>
         {% endif %}
 
-        {% if 137-cognitive-processing-speed-gs == true %}
+        {% if 137-cognitive-processing-speed-(gs) == true %}
         <h6>Cognitive Processing Speed (Gs)</h6>
         <p>
             Gs is a composite score that provides an estimate of ability to quickly perform both simple and complex cognitive tasks, particularly when measured under pressure to sustain controlled attention and concentration. 
         </p>
         <h5>Cognitive Processing Speed (Gs)</h5>
         <p>
-            {{ di-name }} demonstrated a relatively {{ 137-wj-iv-cog-cognitive-processing-speed-gs-inconsistent-consistent }} performance on the subtests within the Cognitive Processing Speed (Gs) cluster. Specifically, 
+            {{ di-name }} demonstrated a relatively {{ 137-wj-iv-cog-cognitive-processing-speed-(gs)-inconsistent-consistent }} performance on the subtests within the Cognitive Processing Speed (Gs) cluster. Specifically, 
             {% if di-gender == 'Boy' %}
             he
             {% else %}
             she
             {% endif %}
-            received a Gs score of {{ 137-wj-iv-cog-cognitive-processing-speed-gs-composite-score }} ({{ 137-wj-iv-cog-cognitive-processing-speed-gs-composite-percentile }} percentile), which falls within in the {{ 137-wj-iv-cog-cognitive-processing-speed-gs-composite-range }}range of functioning. The Gs cluster measured {{ di-name }}'s ability to quickly perform both simple and complex cognitive tasks, particularly when measured under pressure to sustain controlled attention and concentration. 
+            received a Gs score of {{ 137-wj-iv-cog-cognitive-processing-speed-(gs)-composite-score }} ({{ 137-wj-iv-cog-cognitive-processing-speed-(gs)-composite-percentile }} percentile), which falls within in the {{ 137-wj-iv-cog-cognitive-processing-speed-(gs)-composite-range }}range of functioning. The Gs cluster measured {{ di-name }}'s ability to quickly perform both simple and complex cognitive tasks, particularly when measured under pressure to sustain controlled attention and concentration. 
         </p>
         <div class="test-table">
           <div class="table__row table__header">
@@ -5747,16 +5747,16 @@
         </div>
         {% endif %}
 
-        {% if 138-auditory-processing-speed-ga == true %}
+        {% if 138-auditory-processing-speed-(ga) == true %}
         <h5>Auditory Processing Speed (Ga)</h5>
         <p>
-            {{ di-name }} demonstrated a relatively {{ 138-wj-iv-cog-auditory-processing-speed-ga-inconsistent-consistent }} performance on the subtests within the Auditory Processing Speed (Ga) cluster. Specifically, 
+            {{ di-name }} demonstrated a relatively {{ 138-wj-iv-cog-auditory-processing-speed-(ga)-inconsistent-consistent }} performance on the subtests within the Auditory Processing Speed (Ga) cluster. Specifically, 
             {% if di-gender == 'Boy' %}
             he
             {% else %}
             she
             {% endif %}
-            received a Ga score of {{ 138-wj-iv-cog-auditory-processing-speed-ga-composite-score }} ({{ 138-wj-iv-cog-auditory-processing-speed-ga-composite-percentile }} percentile), which falls within in the {{ 138-wj-iv-cog-auditory-processing-speed-ga-composite-range }}range of functioning. The Ga cluster measured {{ di-name }}'s ability to encode, synthesize, and discriminate auditory stimuli, including the ability to employ auditory information in task performance. 
+            received a Ga score of {{ 138-wj-iv-cog-auditory-processing-speed-(ga)-composite-score }} ({{ 138-wj-iv-cog-auditory-processing-speed-(ga)-composite-percentile }} percentile), which falls within in the {{ 138-wj-iv-cog-auditory-processing-speed-(ga)-composite-range }}range of functioning. The Ga cluster measured {{ di-name }}'s ability to encode, synthesize, and discriminate auditory stimuli, including the ability to employ auditory information in task performance. 
         </p>
         <div class="test-table">
           <div class="table__row table__header">
@@ -5766,14 +5766,14 @@
           </div>
           <div class="table__row">
             <div>Phonological Processing</div>
-            <div>{{ 136-verbal-attention-score }}</div>
+            <div>{{ 138-phonological-processing-score }}</div>
             <div>
                 The subtest measures speed of lexical access, a narrow ability of long-term retrieval.
             </div>
           </div>
           <div class="table__row">
             <div>Non-word Repetition</div>
-            <div>{{ 137-pair-cancelation-score }}</div>
+            <div>{{ 138-non-word-repetition-score }}</div>
             <div>
                 The subtest measures aspects of auditory processing and short-term working memory.
             </div>
@@ -5781,16 +5781,16 @@
         </div>
         {% endif %}
 
-        {% if 139-long-term-retrieval-glr == true %}
+        {% if 139-long-term-retrieval-(glr) == true %}
         <h5>Long-Term Retrieval (Glr)</h5>
         <p>
-            {{ di-name }} demonstrated a relatively {{ 139-wj-iv-cog-long-term-retrieval-glr-inconsistent-consistent }} performance on the subtests within the Long-Term Retrieval (Glr) cluster. Specifically, 
+            {{ di-name }} demonstrated a relatively {{ 139-wj-iv-cog-long-term-retrieval-(glr)-inconsistent-consistent }} performance on the subtests within the Long-Term Retrieval (Glr) cluster. Specifically, 
             {% if di-gender == 'Boy' %}
             he
             {% else %}
             she
             {% endif %}
-            received a Glr score of {{ 139-wj-iv-cog-long-term-retrieval-glr-composite-score }} ({{ 139-wj-iv-cog-long-term-retrieval-glr-composite-percentile }} percentile), which falls within in the {{ 139-wj-iv-cog-long-term-retrieval-glr-composite-range }}range of functioning. The Glr cluster measured {{ di-name }}'s ability to store information and fluently retrieve it later in the process of thinking. 
+            received a Glr score of {{ 139-wj-iv-cog-long-term-retrieval-(glr)-composite-score }} ({{ 139-wj-iv-cog-long-term-retrieval-(glr)-composite-percentile }} percentile), which falls within in the {{ 139-wj-iv-cog-long-term-retrieval-(glr)-composite-range }}range of functioning. The Glr cluster measured {{ di-name }}'s ability to store information and fluently retrieve it later in the process of thinking. 
         </p>
         <div class="test-table">
           <div class="table__row table__header">
@@ -5807,16 +5807,50 @@
           </div>
           <div class="table__row">
             <div>Visual Auditory Learning</div>
-            <div>{{ 137-pair-cancelation-score }}</div>
+            <div>{{ 139-visual-auditory-learning-score }}</div>
             <div>
                 The subtest measures long-term storage and retrieval and associative memory.
             </div>
           </div>
         </div>
         {% endif %}
+
+        {% if 140-visual-processing-(gv) == true %}
+        <h5>Visual Processing (Gv)</h5>
+        <p>
+            {{ di-name }} demonstrated a relatively {{ 140-wj-iv-cog-visual-processing-(gv)-inconsistent-consistent }} performance on the subtests within the Visual Processing (Gv) cluster. Specifically, 
+            {% if di-gender == 'Boy' %}
+            he
+            {% else %}
+            she
+            {% endif %}
+            received a Gv score of {{ 140-wj-iv-cog-visual-processing-(gv)-composite-score }} ({{ 140-wj-iv-cog-visual-processing-(gv)-composite-percentile }} percentile), which falls within in the {{ 140-wj-iv-cog-visual-processing-(gv)-composite-range }}range of functioning. The Gv cluster measured {{ di-name }}'s ability to perceive, analyze, synthesize and think with visual patterns, including the ability to store and recall visual representations. 
+        </p>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Visualization</div>
+            <div>{{ 140-visualization-score }}</div>
+            <div>
+                The subtest is designed to measure quantitative reasoning and indicative reasoning, narrow abilities of fluid reasoning.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Picture Recognition</div>
+            <div>{{ 140-picture-recognition-score }}</div>
+            <div>
+                The subtest measures visual memory, a narrow ability of visual processing.
+            </div>
+          </div>
+        </div>
+        {% endif %}
         
         <h5>SUMMARY</h5>
-        <p>Overall, {{ di-name }}'s performance on the WAIS-II provided a snapshot into
+        <p>Overall, {{ di-name }}'s performance on the WJ-IV provided a snapshot into
           {% if di-gender == 'Boy' %}
           his
           {% else %}
@@ -5828,13 +5862,13 @@
           {% else %}
           She
           {% endif %}
-          demonstrated well-developed {{ 5-wais-iv-summary-abilities }} abilities. However,
+          demonstrated well-developed {{ 6-wj-iv-cog-summary-abilities }} abilities. However,
           {% if di-gender == 'Boy' %}
           he
           {% else %}
           she
           {% endif %}
-          also evidenced relative challenges with {{ 5-wais-iv-summary-challenges }}. These challenges should continue to
+          also evidenced relative challenges with {{ 6-wj-iv-cog-summary-challenges }}. These challenges should continue to
           be monitored and evaluated so as to help
           {% if di-gender == 'Boy' %}
           him
@@ -5851,6 +5885,1741 @@
         </p>
       </div>
       {% endif %}
+
+      <!-- WPPSI-IV -->
+      {% if WPPSI-IV == true %}
+      <div class="domain__test">
+        <h3>Intelligence</h3>
+        <h4 class="h3--sib-h4">WPPSI-IV</h4>
+        <p>
+            WPPSI-IV is a test of intellectual abilities, which assesses both cognitive strengths and weaknesses in infants and children aged 2 years 6 months through 7 years 7 months (2:6-7:7).
+        </p>
+        <hr>
+        <h5>Full Scale IQ</h5>
+        <p>
+            The Full Scale IQ is a composite score that represents general intellectual functioning and is calculated from all of the subtests within the main indices.
+        </p>
+        
+        {% if 9-if-fsiq-is-meaningful == true %}
+        <p>
+          Overall, (client) demonstrated a consistent performance on the WPPSI-IV and received a Full-Scale IQ (FSIQ)
+          score of {{ 9-wppsi-iv-fsiq-score }}
+          ({{ 9-wppsi-iv-fsiq-percentile }} percentile), which falls within in the {{ 9-wppsi-iv-fsiq-range }}range when
+          compared to
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          same-aged peers.
+        </p>
+        {% else %}
+        <p>
+          Overall, {{ di-name }} demonstrated an inconsistent performance on the WPPSI-IV. As a result,
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          Full-Scale score cannot be interpreted meaningfully due to the significant discrepancies between the five
+          Composite areas that constitute
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          Full-Scale score (FSIQ). Therefore, in order to better understand
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          cognitive strengths and weaknesses, a more in-depth look at all of {{ di-name }}'s individual subtest scores
+          is warranted.
+        </p>
+        {% endif %}
+
+        <h5>GENERAL ABILITY INDEX</h5>
+        <p> is a composite score that provides an estimate of general intellectual ability, with reduced emphasis on working memory and processing speed relative to the FSIQ.</p>
+        <hr />
+
+        {% if 153-verbal-comprehension == true %}
+        <h5>Verbal Comprehension</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+              <div>Similarities</div>
+              <div>{{ 647-similarities-score }}</div>
+              <div>
+                  The subtest is designed to measure verbal concept formation and abstract reasoning. It also involves crystallized intelligence, auditory comprehension, memory, associative and categorical thinking, distinction between nonessential and essential features, and verbal expression.
+              </div>
+            </div>
+          <div class="table__row">
+            <div>Vocabulary</div>
+            <div>{{ 648-vocabulary-score }}</div>
+            <div>
+                The subtest is designed to measure word knowledge and verbal concept formation. It also measures crystallized intelligence, fund of knowledge, learning ability, verbal expression, long-term memory, and degree of vocabulary development.
+            </div>
+          </div>
+          <div class="table__row">
+              <div>Information</div>
+              <div>{{ 649-information-score }}</div>
+              <div>
+                  This subtest is designed to measure a child’s ability to acquire, retain, and retrieve general factual knowledge. It involves crystallized intelligence, long-term memory, and the ability to retain and retrieve knowledge from the environment and/or school.
+              </div>
+            </div>
+          <div class="table__row">
+            <div>Comprehension</div>
+            <div>{{ 650-comprehension-score }}</div>
+            <div>
+                It is designed to measure verbal reasoning and conceptualization, verbal comprehension and expression, the ability to evaluate and use past experience, and the ability to demonstrate practical knowledge and judgement. It also involved crystallized intelligence, knowledge of conventional standards of behavior, social judgement, long-term memory and common sense.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 154-fluid-reasoning == true %}
+        <h5>Fluid Reasoning</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Matrix Reasoning</div>
+            <div>{{ 651-matrix-reasoning-score }}</div>
+            <div>
+                The subtest is designed to measure fluid intelligence, broad visual intelligence, classification and spatial ability, knowledge of part-whole relationships, simultaneous processing, and perceptual organization.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Picture Concepts</div>
+            <div>{{ 652-picture-concepts-score }}</div>
+            <div>
+                The subtest measures fluid and inductive reasoning, visual-perceptual recognition and processing, and conceptual thinking.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 155-visual-spatial-reasoning == true %}
+        <h5>Visual-Spatial Reasoning</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Block Design</div>
+            <div>{{ 653-block-design-score }}</div>
+            <div>
+                The subtest is designed to measure the ability to analyze and synthesize abstract visual stimuli. It also involved nonverbal concept formation and reasoning, broad visual intelligence, visual perception and organization, simultaneous processing, visual-motor coordination, learning, and the ability to separate figure-ground in visual stimuli.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Object Assembly</div>
+            <div>{{ 654-object-assembly-score }}</div>
+            <div>
+                It is designed to measure visual-perceptual organization, integration and synthesis of part-whole relationships, nonverbal reasoning, and trial-and-error learning. It also involves spatial ability, visual-motor coordination, cognitive flexibility, and persistence.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 156-working-memory == true %}
+        <h5>Working Memory</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Picture Memory</div>
+            <div>{{ 655-picture-memory-score }}</div>
+            <div>
+                The subtest measures visual working memory and working memory capacity through the use of meaningful stimuli.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Zoo Locations</div>
+            <div>{{ 656-zoo-locations-score }}</div>
+            <div>
+                This subtest utilizes meaningful stimuli and proactive interference in order to measure spatial working memory.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 157-processing-speed == true %}
+        <h5>Processing Speed</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Bug Search</div>
+            <div>{{ 657-bug-search-score }}</div>
+            <div>
+                This subtest measures perceptual speed, short-term visual memory, visual-motor coordination, cognitive flexibility, visual discrimination, and concentration.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Cancellation</div>
+            <div>{{ 658-cancellation-score }}</div>
+            <div>
+                This subtest measures perceptual speed, rate of test taking, speed of visual-processing and mental operation, visual scanning ability, and visual-perceptual recognition and discrimination. It may also involve attention, concentration, and visual recall.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Animal Coding</div>
+            <div>{{ 659-animal-coding-score }}</div>
+            <div>
+                It measures perceptual speed, short-term memory, learning and visual scanning ability, cognitive flexibility, attention, and motivation.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 158-language == true %}
+        <h5>Language</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Receptive Vocabulary</div>
+            <div>{{ 158-receptive-vocabulary-score }}</div>
+            <div>
+                It is designed to measure receptive language ability and vocabulary development. It also involves lexical knowledge, fund of information, long-term memory, and perception of meaningful stimuli.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Picture Naming</div>
+            <div>{{ 158-picture-naming-score }}</div>
+            <div>
+                This subtest measures expressive language ability, specifically in the area of semantic (i.e., word knowledge) development. It also involves acquired knowledge, fund of information, long-term memory, and perception of meaningful stimuli.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        
+        <h5>SUMMARY</h5>
+        <p>Overall, {{ di-name }}'s performance on the WPPSI-IV provided a snapshot into
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          various cognitive abilities and strengths.
+          {% if di-gender == 'Boy' %}
+          He
+          {% else %}
+          She
+          {% endif %}
+          demonstrated well-developed {{ 9-wppsi-iv-summary-abilities }} abilities. However,
+          {% if di-gender == 'Boy' %}
+          he
+          {% else %}
+          she
+          {% endif %}
+          also evidenced relative challenges with {{ 9-wppsi-iv-summary-challenges }}. These challenges should continue to
+          be monitored and evaluated so as to help
+          {% if di-gender == 'Boy' %}
+          him
+          {% else %}
+          her
+          {% endif %}
+          continue to perform at
+          {% if di-gender == 'Boy' %}
+          his
+          {% else %}
+          her
+          {% endif %}
+          best.
+        </p>
+      </div>
+      {% endif %}
+
+      <!-- Learning & Memory -->
+      <!-- WRAML2 -->
+      {% if WRAML2 == true %}
+      <div class="domain__test">
+        <h3>Learning &amp; Memory</h3>
+        <h4 class="h3--sib-h4">WRAML2</h4>
+        <p>
+            WRAML2 is an individually administered test battery designed to assess memory ability in individuals ages 5-90 years.
+        </p>
+        <hr>
+        
+        <h6>Core Subtests and Indexes</h6>
+        {% if 60-verbal-memory-index == true %}
+        <h5>Verbal Memory Index</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+              <div>Story Memory</div>
+              <div>{{ 266-story-memory-score }}</div>
+              <div>
+                Provides a measure of contextualized or meaningful verbal information. Given the need to remember extended, meaningful verbal information in everyday life (e.g., conversations, lectures, reading comprehension), performance on this subtest may be particularly important.
+              </div>
+            </div>
+          <div class="table__row">
+            <div>Verbal Learning</div>
+            <div>{{ 267-verbal-learning-score }}</div>
+            <div>
+                Evaluates how well the individual actively learns and is able to recall initially unrelated verbal information with practice opportunities. A list of common nouns is repeated across four trials so that the Examiner can evaluate her ability to learn incrementally and then recall rote verbal information (e.g., remembering a grocery list, remembering the U.S. presidents of the 19th century).
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 61-visual-memory-index == true %}
+        <h5>Visual Memory Index</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Design Memory</div>
+            <div>{{ 268-design-memory-score }}</div>
+            <div>
+                Provides a measure of memory of visual material that is minimally meaningful. Five cards, each with an array of geometric shapes, are exposed and then after a brief delay the client is asked to draw what is remembered. Copying rote information from a chalkboard or remembering the shapes and locations of newly learned countries on a map are examples of everyday tasks tapping this type of visual memory. For this task, performance also is affected by attention, efficient scanning strategies, spatial skills, and executive skills.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Picture Memory</div>
+            <div>{{ 269-picture-memory-score }}</div>
+            <div>
+                Provides a measure of nonverbal immediate memory for contextualized information or meaningful information. Performance on this subtest may be noted in situations such as remembering where people sat around a table during a meeting earlier in the day or recalling the content of a photograph in a newspaper article that was read previously. Good search strategies and sustained attention are important skills for this subtest.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 62-attention-concentration-index == true %}
+        <h5>Finger Windows</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Verbal Attention</div>
+            <div>{{ 270-finger-windows-score }}</div>
+            <div>
+                A measure of nonverbal, rote sequential recall. Although the Finger Windows subtest is a measure of visual rote recall, it also is heavily dependent on brief episodes of directed attention. An individual performing well on this subtest also may perform well learning an internal map to a new location or remembering sequential information from construction diagrams.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Number/Letter</div>
+            <div>{{ 1271-number/letter-score }}</div>
+            <div>
+                A measure of auditory, rote sequential recall. Although the Number Letter subtest is a measure of auditory rote recall, it is heavily dependent on brief episodes of directed attention. An individual performing well on this subtest also should perform well recording phone numbers, class assignments, or sporting team scores accurately.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 63-optional-subtests == true %}
+        <h6>Optional, Delay Recall, and Recognition Subtests</h6>
+        <h5>Optional Subtests</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Sentence Memory</div>
+            <div>{{ 272-sentence-memory-score }}</div>
+            <div>
+                Requires the individual to repeat dictated single sentences of increasing length. This subtest evaluates immediate verbal memory skills similar to those needed to follow novel verbal directions or to relay a brief phone message accurately.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Sound Symbol</div>
+            <div>{{ 273-sound-symbol-score }}</div>
+            <div>
+                A paired-associate task requiring the learner to recall sounds associated with various abstract figures. It is a cross-modal task (i.e., verbal-visual), and one that taps important aspects involved in the acquisition of the mechanics of reading or “word-calling.”
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Verbal Working Memory</div>
+            <div>{{ 274-verbal-working-memory-score }}</div>
+            <div>
+                Measures how well an individual retains information that is manipulated while it is in the short-term memory buffer. On this subtest, the client listens to a list of nouns that are both animals and nonanimals and, immediately thereafter, must recall the words in a specified reorganized order. Two levels of difficulty are utilized. An individual performing well on this subtest also should perform well on tasks making heavy demands on verbal working memory, such as comprehending meanings in an extended reading passage, or listening to a radio sports broadcast and being able to figure out who won last night’s games as pairs of team nicknames are announced followed by their final scores.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Symbolic Working memory</div>
+            <div>{{ 275-symbolic-working-memory-score }}</div>
+            <div>
+                Measures how well a person actively operates on and retains symbolic information (e.g., numbers, letters) prior to recall. On this subtest, the client first listens to a random list of numbers and then to a random list of numbers and letters. After each section, numbers are recalled in appropriate numerical order and then numbers and letters are recalled in numerical and alphabetical order. Although memory and attention are important for this task, executive skills also are important in finding an appropriate learning strategy. Rote sequential memory may be needed for solving some math problems or in learning irregularly spelled words.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 64-delay-recall-subtests == true %}
+        <h5>Delay Recall Subtests</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Story Memory Delay Recall</div>
+            <div>{{ 276-story-memory-delay-recall-score }}</div>
+            <div>
+                &nbsp;
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Verbal Learning Delay Recall</div>
+            <div>{{ 277-verbal-learning-delay-recall-score }}</div>
+            <div>
+                Provides a measure of memory retrieval after the initial learning of new verbal information (approximately 15 minutes after initial learning).
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Sound Symbol Delay Recall</div>
+            <div>{{ 278-sound-symbol-delay-recall-score }}</div>
+            <div>
+                Provides a measure of memory retrieval after the initial learning of new sound symbol information (approximately 15 minutes after initial learning).
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 65-recognition-subtests == true %}
+        <h5>Recognition Subtests</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Story Memory Recognition</div>
+            <div>{{ 279-story-memory-recognition-score }}</div>
+            <div>
+                Provides a measure of recognition memory. A multiple choice format with questions from each story is used, providing an interesting comparison between free recall (i.e., in the immediate recall and the delayed recall Story Memory formats) and recognition.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Verbal Learning Recognition</div>
+            <div>{{ 280-verbal-learning-recognition-score }}</div>
+            <div>
+                Provides a measure of recognition recall of verbal information presented previously (15 - 20 minutes prior).
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Design Memory Recognition</div>
+            <div>{{ 281-design-memory-recognition-score }}</div>
+            <div>
+                Provides a measure of recognition recall of visual information that was viewed approximately 20 minutes earlier. The individual is asked to look at and distinguish between designs that were and were not presented earlier in the testing session. Attention to visual detail and executive skills are involved in this task.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Picture Memory Recognition</div>
+            <div>{{ 282-picture-memory-recognition-score }}</div>
+            <div>
+                Provides a measure of recognition of meaningful visual information or contextualized visual information, such as that found in pictures, in scenes, or in the environment. An example would be correctly recognizing a place in a new city where one has been recently.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <!-- GORT-5 -->
+      {% if GORT-5 == true %}
+      <div class="domain__test">
+        <h3>Learning &amp; Memory</h3>
+        <h4 class="h3--sib-h4">GORT-5</h4>
+        <p>
+            The GORT-5 is a norm-referenced, reliable test that yields valid results for oral reading rate, accuracy, fluency, and comprehension for individuals ages 6 years 0 months (0-6) through 23 years 11 months (23-11).
+        </p>
+        
+        <h5>Gray Oral Reading Tests–Fifth Edition</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Oral Measure</div>
+            <div>Percentile</div>
+            <div>Age Level Equivalency</div>
+            <div>Grade Level Equivalency</div>
+          </div>
+          <div class="table__row">
+            <div>Rate</div>
+            <div>{{ PERCENTILE GOES HERE }}</div>
+            <div>{{ AGE LEVEL VARIABLE }}</div>
+            <div>{{ GRADE LEVEL VARIABLE }}</div>
+          </div>
+          <div class="table__row">
+            <div>Accuracy</div>
+            <div>{{ PERCENTILE GOES HERE }}</div>
+            <div>{{ AGE LEVEL VARIABLE }}</div>
+            <div>{{ GRADE LEVEL VARIABLE }}</div>
+          </div>
+          <div class="table__row">
+            <div>Fluency</div>
+            <div>{{ PERCENTILE GOES HERE }}</div>
+            <div>{{ AGE LEVEL VARIABLE }}</div>
+            <div>{{ GRADE LEVEL VARIABLE }}</div>
+          </div>
+          <div class="table__row">
+            <div>Comprehension</div>
+            <div>{{ PERCENTILE GOES HERE }}</div>
+            <div>{{ AGE LEVEL VARIABLE }}</div>
+            <div>{{ GRADE LEVEL VARIABLE }}</div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- WMS-IV -->
+      {% if WMS-IV == true %}
+      <div class="domain__test">
+        <h3>Learning &amp; Memory</h3>
+        <h4 class="h3--sib-h4">WMS-IV</h4>
+        <p>
+            WMS-IV is an individually administered battery designed to assess various memory and working memory abilities in individuals ages 16-90. The WMS-IV provides a detailed assessment of clinically-relevant aspects of memory functioning commonly report in individuals with suspected memory deficits or diagnoses with a wide range of neurological, psychiatric, and developmental disorders.
+        </p>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subtest</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Brief Cognitive Status Exam</div>
+            <div>{{ 637-brief-cognitive-status-exam-score }}</div>
+            <div>
+                This optional subtest assesses a variety of cognitive functions. The examinee performs simple tasks in a number of different area including orientation to time, mental control, clock drawing, incidental recall, automaticity and inhibitory control and verbal production.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Logical Memory</div>
+            <div>{{ 638-logical-memory-score }}</div>
+            <div>
+                <p>
+                    This subtest assesses narrative memory under a free recall condition. Two short stories are orally presented. For older adults, one story is presented twice. The examinee is asked to retell each story from memory immediately after hearing it.
+                </p>
+                <p>
+                    The delayed condition assesses long-term narrative memory with free recall and recognition tasks. The examinee is asked to retell both stories from the immediate condition. Then the examinee is asked yes/no questions about both stories.
+                </p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Verbal Paired Associates</div>
+            <div>{{ 639-verbal-paired-associates-score }}</div>
+            <div>
+                <p>
+                  This subtest assesses verbal memory for associated word pairs. After 10 or 14-word pairs are read to the examinee, the first word of each pair is read, and the examinee is asked to provide the corresponding word. There are four trials of the same list in different orders.
+                </p>
+                <p>
+                  The delayed condition assesses long-term recall for verbally paired information with cued recall and recognition tasks and includes a free recall task. The examinee is orally presented with the first word of each pair learned in the immediate condition and asked to provide the corresponding word.  The examinee is then read a list of word pairs and asked to identify each as either one of the word pairs he or she was asked to remember or a new word pair. Finally, during the optional word recall task, the examinee is asked to say as many of the words from the pairs as he or she can recall.
+                </p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Designs</div>
+            <div>{{ 640-designs-score }}</div>
+            <div>
+                <p>
+                  This subtest assesses spatial memory for unfamiliar visual material. The examinee is shown a grid with 4-8 designs on a page for 10 seconds, which is then removed from view. The examinee then selects the designs from a set of cards and places the cards in a grid in the same place as previously shown.
+                </p>
+                <p>
+                  The delated condition assesses long-term spatial and visual memory with free recall and recognition tasks. First, the examinee is asked to recreate the pages shown in the immediate condition with the cards and grid. Then he or she is shown a series of grids and asked to select the two designs that are correct and in the same place as on the pages shown in the immediate condition.
+                </p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Visual Reproduction</div>
+            <div>{{ 641-visual-reproduction-score }}</div>
+            <div>
+                <p>
+                  This subtest assesses memory for nonverbal visual stimuli. A series of five designs is shown, one at a time, for 10 seconds each. After each design is presented, the examinee is asked to draw the design from memory.
+                </p>
+                <p>
+                  The delayed condition assesses long-term visual-spatial memory with free recall and recognition tasks and includes a direct copy task. First, the examinee is asked to draw the designs shown during the immediate condition from memory in any order. Second, the examinee is asked to choose which of six designs on a page matches the original design shown during the immediate condition. Third, for an optional copy task, the examinee is asked to draw the designs while looking at them.
+                </p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Spatial Addition</div>
+            <div>{{ 642-spatial-addition-score }}</div>
+            <div>
+                This subtest assesses visual-spatial working memory using a visual addition task. The examinee is shown, sequentially, two grids with blue and red circles. The examinee is then asked to add or subtract the location if the circles based on a set of rules.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Symbol Span</div>
+            <div>{{ 643-symbol-span-score }}</div>
+            <div>
+                This subtest assesses visual working memory using novel visual stimuli. The examinee is briefly shown a series of abstract symbols on a page and then asked to select the symbols from an array of symbols, in the same order they were presented on the previous page.
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- WRAVMA -->
+      {% if WRAVMA == true %}
+      <div class="domain__test">
+        <h3>Sensorimotor Function</h3>
+        <h4 class="h3--sib-h4">WRAVMA</h4>
+        <p>
+            The WRAVMA is an efficient and economical measurement battery which assess three important aspects of visual-motor functioning in children and adolescents.
+        </p>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Measure</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Drawing</div>
+            <div>{{ 590-drawing-score }}</div>
+            <div>Drawing Test measures integrated visual-motor ability</div>
+          </div>
+          <div class="table__row">
+            <div>Matching</div>
+            <div>{{ 591-matching-score }}</div>
+            <div>Matching Test measures visual-spatial ability</div>
+          </div>
+          <div class="table__row">
+            <div>Pegboard</div>
+            <div>{{ 592-pegboard-score }}</div>
+            <div>Pegboard Test measures fine motor ability</div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Beery VMI -->
+      {% if Beery VMI == true %}
+      <div class="domain__test">
+        <h3>Sensorimotor Function</h3>
+        <h4 class="h3--sib-h4">Beery VMI</h4>
+        <p>
+            Beery VMI is designed to assess the extent to which individuals can integrate their visual and motor (finger and hand movement) abilities. The Beery VMI also contains two supplemental standardized tests, Visual Perception and Motor Coordination, which also formally evaluate an individual’s visual and motor abilities, respectively.
+        </p>
+      </div>
+      {% endif %}
+
+      <!-- Social-Emotional -->
+      <!-- PIY -->
+      {% if PIY == true %}
+      <div class="domain__test">
+        <h3>Social-Emotional</h3>
+        <h4 class="h3--sib-h4">PIY</h4>
+        <p>
+            The Personality Inventory for Youth is a multidimensional, objective, self-report measures for use in the evaluation of children and adolescents aged 9 to 18 years (4th through 12th grades). The PIY assesses emotional and behavioral adjustment, family character and interaction, and school adjustment and academic ability.
+        </p>
+        <hr>
+
+        {% if 110-cognitive-impairment-scale == true %}
+        <h5>Cognitive Impairment Scale</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subscale</div>
+            <div>T-Score</div>
+            <div>Percentile Rank</div>
+          </div>
+          <div class="table__row">
+            <div>Poor Achievement and Memory</div>
+            <div>{{ 110-poor-achievement-and-memory-score }}</div>
+            <div>{{ 110-poor-achievement-and-memory-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Inadequate Abilities</div>
+            <div>{{ 110-inadequate-abilities-score }}</div>
+            <div>{{ 110-inadequate-abilities-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Learning Problems</div>
+            <div>{{ 110-learning-problems-score }}</div>
+            <div>{{ 110-learning-problems-percentile-rank }}</div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 111-impulsivity-and-distractibility-scale == true %}
+        <h5>Impulsivity and Distractibility Scale</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subscale</div>
+            <div>T-Score</div>
+            <div>Percentile Rank</div>
+          </div>
+          <div class="table__row">
+            <div>Brashness</div>
+            <div>{{ 111-brashness-score }}</div>
+            <div>{{ 111-brashness-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Distractibility and Overactivity</div>
+            <div>{{ 111-distractibility-and-overactivity-score }}</div>
+            <div>{{ 111-distractibility-and-overactivity-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Impulsivity</div>
+            <div>{{ 111-impulsivity-score }}</div>
+            <div>{{ 111-impulsivity-percentile-rank }}</div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 112-delinquency-scale == true %}
+        <h5>Delinquency Scale</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subscale</div>
+            <div>T-Score</div>
+            <div>Percentile Rank</div>
+          </div>
+          <div class="table__row">
+            <div>Antisocial Behavior</div>
+            <div>{{ 112-antisocial-behavior-score }}</div>
+            <div>{{ 112-antisocial-behavior-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Dyscontrol</div>
+            <div>{{ 112-dyscontrol-score }}</div>
+            <div>{{ 112-dyscontrol-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Noncompliance</div>
+            <div>{{ 112-noncompliance-score }}</div>
+            <div>{{ 112-noncompliance-percentile-rank }}</div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 113-family-dysfunction-scale == true %}
+        <h5>Family Dysfunction Scale</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subscale</div>
+            <div>T-Score</div>
+            <div>Percentile Rank</div>
+          </div>
+          <div class="table__row">
+            <div>Parent-Child Conflict</div>
+            <div>{{ 113-parent-child-conflict-score }}</div>
+            <div>{{ 113-parent-child-conflict-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Parent Maladjustment</div>
+            <div>{{ 113-parent-maladjustment-score }}</div>
+            <div>{{ 113-parent-maladjustment-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Marital Discord</div>
+            <div>{{ 113-marital-discord-score }}</div>
+            <div>{{ 113-marital-discord-percentile-rank }}</div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 114-reality-distortion-scale == true %}
+        <h5>Reality Distortion Scale</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subscale</div>
+            <div>T-Score</div>
+            <div>Percentile Rank</div>
+          </div>
+          <div class="table__row">
+            <div>Feelings of Alienation</div>
+            <div>{{ 114-feelings-of-alienation-score }}</div>
+            <div>{{ 114-feelings-of-alienation-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Hallucinations and Delusions</div>
+            <div>{{ 114-hallucinations-and-delusions-score }}</div>
+            <div>{{ 114-hallucinations-and-delusions-percentile-rank }}</div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 115-somatic-concern-scale == true %}
+        <h5>Somatic Concern Scale</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subscale</div>
+            <div>T-Score</div>
+            <div>Percentile Rank</div>
+          </div>
+          <div class="table__row">
+            <div>Psychosomatic Syndrome</div>
+            <div>{{ 115-psychosomatic-syndrome-score }}</div>
+            <div>{{ 115-psychosomatic-syndrome-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Muscular Tension and Anxiety</div>
+            <div>{{ 115-muscular-tension-and-anxiety-score }}</div>
+            <div>{{ 115-muscular-tension-and-anxiety-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Preoccupation with Disease</div>
+            <div>{{ 115-preoccupation-with-disease-score }}</div>
+            <div>{{ 115-preoccupation-with-disease-percentile-rank }}</div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 116-psychological-discomfort-scale == true %}
+        <h5>Psychological Discomfort Scale</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subscale</div>
+            <div>T-Score</div>
+            <div>Percentile Rank</div>
+          </div>
+          <div class="table__row">
+            <div>Fear and Worry</div>
+            <div>{{ 116-fear-and-worry-score }}</div>
+            <div>{{ 116-fear-and-worry-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Depression</div>
+            <div>{{ 116-depression-score }}</div>
+            <div>{{ 116-depression-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Sleep Disturbance</div>
+            <div>{{ 116-sleep-disturbance-score }}</div>
+            <div>{{ 116-sleep-disturbance-percentile-rank }}</div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 117-social-withdrawal-scale == true %}
+        <h5>Social Withdrawal Scale</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subscale</div>
+            <div>T-Score</div>
+            <div>Percentile Rank</div>
+          </div>
+          <div class="table__row">
+            <div>Social Introversion</div>
+            <div>{{ 117-social-introversion-score }}</div>
+            <div>{{ 117-social-introversion-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Isolation</div>
+            <div>{{ 117-isolation-score }}</div>
+            <div>{{ 117-isolation-percentile-rank }}</div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 118-social-skill-deficit-scale == true %}
+        <h5>Social Skill Deficit Scale</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Subscale</div>
+            <div>T-Score</div>
+            <div>Percentile Rank</div>
+          </div>
+          <div class="table__row">
+            <div>Limited Peer Status</div>
+            <div>{{ 118-limited-peer-status-score }}</div>
+            <div>{{ 118-limited-peer-status-percentile-rank }}</div>
+          </div>
+          <div class="table__row">
+            <div>Conflict with Peers</div>
+            <div>{{ 118-conflict-with-peers-score }}</div>
+            <div>{{ 118-conflict-with-peers-percentile-rank }}</div>
+          </div>
+        </div>
+        {% endif %}
+
+        
+      </div>
+      {% endif %}
+
+      <!-- MCMI-IV -->
+      {% if MCMI–IV == true %}
+      <div class="domain__test">
+        <h3>Social-Emotional</h3>
+        <h4 class="h3--sib-h4">MCMI–IV</h4>
+        <p>
+            Millon Clinical Multiaxial Inventory, 4th Edition (MCMI–IV) was designed to help determine personality style. The MCMI–IV is normed on a clinical population and is based on a biosocial-learning theory and evolutionary model in which personality formation is viewed as a process of learned strategies used to secure reinforcement and minimize punishment. More specifically, Millon’s personality theory considers behavioral response preferences in pleasure/pain, active/passive, and self/other domains. The test also contains measures that gauge response style and test-taking attitude which can be used determine overall validity and provide adjustments to the profile when applicable.
+        </p>
+        <hr>
+
+        {% if 119-clinical-personality-patterns == true %}
+        <h5>Clinical Personality Patterns</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Schizoid (1)</div>
+            <div>{{ 119-schizoid-(1)-score }}</div>
+            <div>
+                Schizoid individuals are noted for their lack of desire and their incapacity to experience deep pleasure or pain.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Avoidant (2A)</div>
+            <div>{{ 119-avoidant-(2a)-score }}</div>
+            <div>
+                Avoidant individuals experience few positive reinforcers from themselves or others.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Depressive (2B)</div>
+            <div>{{ 119-depressive-(2b)-score }}</div>
+            <div>
+                There has been a significant loss, a sense of giving up, and a loss of hope that joy can be retrieved. The depressive personality experiences pain as permanent.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Dependent (3)</div>
+            <div>{{ 119-dependent-(3)-score }}</div>
+            <div>
+                Dependent individuals have learned not only to turn to others for nurturance and security but to wait passively for their leadership in providing them.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Histrionic (4)</div>
+            <div>{{ 119-histrionic-(4)-score }}</div>
+            <div>
+                Although histrionic individuals turn to others no less than dependents do, they appear on the surface to be quite dissimilar from their passive counterparts. These individuals often exhibit an insatiable if not indiscriminate search for stimulation and affection.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Narcissistic (5)</div>
+            <div>{{ 119-narcissistic-(5)-score }}</div>
+            <div>
+                Narcissistic individuals are noted by their egotistic self-involvement, experiencing primary pleasure simply by passively being or focusing on themselves.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Antisocial (6A)</div>
+            <div>{{ 119-antisocial-(6a)-score }}</div>
+            <div>
+                Antisocial individuals act to counter the expectation of pain and depredation at the hands of others by engaging in duplicitous or illegal behavior designed to exploit the environment for self-gain.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Sadistic (Aggressive) 6B</div>
+            <div>{{ 119-sadistic-(aggressive)-6b-score }}</div>
+            <div>
+                Individuals who are not judged to be antisocial may get personal pleasure and satisfaction in ways that humiliate others and violate their rights and feelings.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Compulsive (7)</div>
+            <div>{{ 119-compulsive-(7)-score }}</div>
+            <div>
+                Compulsive individuals have been intimidated and coerced into accepting the demands and judgements imposed on them by others.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Negativistic (Passive-Aggressive) 8A</div>
+            <div>{{ 119-negativistic-(passive-aggressive)-8a-score }}</div>
+            <div>
+                Negativistic individuals are torn between following the rewards that are offered by others and those they desire themselves.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Masochistic (Self-Defeating) 8B</div>
+            <div>{{ 119-masochistic-(self-defeating)-8b-score }}</div>
+            <div>
+                Relating to others in an obsequious and self-sacrificing manner, masochistic individuals allow and perhaps encourage others to exploit or take advantage of them.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 120-severe-personality-pathology == true %}
+        <h5>Severe Personality Pathology</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Schizotypal (S)</div>
+            <div>{{ 120-schizotypal-(s)-score }}</div>
+            <div>
+                Schizotypal personality disorder represents a cognitively dysfunctional and interpersonally detached orientation. Schizotypal individuals prefer social isolation with minimal personal attachments and obligations.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Borderline {C}</div>
+            <div>{{ 120-borderline-{c}-score }}</div>
+            <div>
+                Each borderline variant has structural defects and experiences intense endogenous moods with recurring periods of dejection and apathy, often interspersed with spells of anger, anxiety, or euphoria.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Paranoid (P)</div>
+            <div>{{ 120-paranoid-(p)-score }}</div>
+            <div>
+                Paranoid personality displays a vigilant mistrust of others and an edgy defensiveness against anticipated criticism and deception. Paranoid individuals are distinctive in the immutability of their feelings and the inflexibility of their thoughts.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 121-clinical-syndromes == true %}
+        <h5>Clinical Syndromes</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Anxiety (A)</div>
+            <div>{{ 121-anxiety-(a)-score }}</div>
+            <div>
+                An anxious patient often reports feeling either vaguely apprehensive or specifically phobic.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Somatoform (H)</div>
+            <div>{{ 121-somatoform-(h)-score }}</div>
+            <div>
+                Patients with elevated scores on the Somatoform scale express their psychological difficulties through somatic channels, persistent periods of fatigue and weakness, and a preoccupation with ill health and with a variety of dramatic but largely nonspecific pains in different and unrelated regions of the body.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Bipolar: Manic (N)</div>
+            <div>{{ 121-bipolar:-manic-(n)-score }}</div>
+            <div>
+                Bipolar patients evidence periods of superficial elation, inflated self-esteem, restless overactivity and distractibility, pressured speech, impulsiveness, and irritability.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Dysthymia (D)</div>
+            <div>{{ 121-dysthymia-(d)-score }}</div>
+            <div>
+                Patients with high scores on the Dysthymia scale remain involved in everyday life but have been preoccupied over a period of years with feelings of discouragement or guilt, a lack of initiative, behavioral apathy, low self-esteem, and frequently expressed futility and self-deprecatory comments.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Alcohol Dependence (B)</div>
+            <div>{{ 121-alcohol-dependence-(b)-score }}</div>
+            <div>
+                A patient with a high score on the Alcohol Dependence scale probably has a history of alcoholism, has tried to overcome the problem with minimal success, and as a consequence experiences considerable discomfort in family and work settings.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Drug Dependence (T)</div>
+            <div>{{ 121-drug-dependence-(t)-score }}</div>
+            <div>
+                An elevated Drug Dependence score indicates that the patient probably has a recurrent or recent history of drug abuse, tends to find it difficult to restrain impulses or keep them within conventional social limits, and is unable to manage the personal consequences of this behavior.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Post-Traumatic Stress Disorder {R}</div>
+            <div>{{ 121-post-traumatic-stress-disorder-{r}-score }}</div>
+            <div>
+                Patients with elevated scores of Post-Traumatic Stress Disorder scale have experienced an event that involved a threat to their life and reacted to it with intense fear or feelings or helplessness.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 122-severe-clinical-syndromes == true %}
+        <h5>Severe Clinical Syndromes</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Thought Disorder (SS)</div>
+            <div>{{ 122-thought-disorder-(ss)-score }}</div>
+            <div>
+                Depending on the length and course of the problem, patients with elevated scores on this scale are usually classified as “schizophrenic” or “schizophreniform” or as having a brief reactive psychosis.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Major Depression (CC)</div>
+            <div>{{ 122-major-depression---(cc)-score }}</div>
+            <div>
+                Patients with high scores on this scale are usually incapable of functioning in a normal environment, are severely depressed, and express a dread of the future, suicidal ideation, and a sense of hopeless resignation.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Delusional Disorder (PP)</div>
+            <div>{{ 122-delusional-disorder-(pp)-score }}</div>
+            <div>
+                Patients with delusional disorder are frequently considered acutely paranoid and may become periodically belligerent, voicing irrational but interconnected delusions of a jealous, persecutory, or grandiose nature.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 123-modifying-indices == true %}
+        <h5>Modifying Indices</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Disclosure (X)</div>
+            <div>{{ 123-disclosure-(x)-score }}</div>
+            <div>
+                The Disclosure index (Scale X) is the next index that may signify problematic response behavior, notably whether the patient was inclined to be frank and self-revealing or reticent and secretive.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Desirability (Y)</div>
+            <div>{{ 123-desirability-(y)-score }}</div>
+            <div>
+                The Desirability index (Scale Y) assesses the degree to which the patient’s results may have been affected by his or her inclination to appear socially attractive, morally virtuous, or emotionally well composed.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Debasement (Z)</div>
+            <div>{{ 123-debasement-(z)-score }}</div>
+            <div>
+                The Debasement index (Scale Z) generally reflects tendencies that are the opposite of those reflected by Scale Y.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 124-random-response-indicators == true %}
+        <h5>Random Response Indicators</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Invalidity (V)</div>
+            <div>{{ 124-invalidity-(v)-score }}</div>
+            <div>
+                Help detect random responding. Scale V consists of three items for which a True response is highly implausible if the test-take is responding to the item content.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Inconsistency (W)</div>
+            <div>{{ 124-inconsistency-(w)-score }}</div>
+            <div>
+                Help detect random responding. Scale W comprises 44 item response pairs: each keyed pair of responses is semantically contradictory.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <!-- MMPI-2 -->
+      {% if MMPI-2 == true %}
+      <div class="domain__test">
+        <h3>Social-Emotional</h3>
+        <h4 class="h3--sib-h4">MMPI-2</h4>
+        <p>
+            The Minnesota Personality Inventory-2 is a psychological test that assesses personality traits and psychopathology. The MMPI-2 is designed with 10 clinical scales which assess 10 major categories of abnormal human behavior, and four validity scales, which assess the person’s general test-taking attitude and whether they answered the items on the test in a truthful and accurate manner.
+        </p>
+        <hr>
+
+        {% if 125-clinical-scales == true %}
+        <h5>Clinical Scales</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Hypochondriasis (Hs)</div>
+            <div>{{ 125-hypochondriasis-(hs)-score }}</div>
+            <div>
+                The Hypochondriasis scale tapes a wide variety of vague and nonspecific complaints about bodily functioning. There are two primary factors that this subscale measures — poor physical health and gastrointestinal difficulties.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Depression (D)</div>
+            <div>{{ 125-depression-(d)-score }}</div>
+            <div>
+                The Depression scale measures clinical depression, which is characterized by poor morale, lack of hope in the future, and a general dissatisfaction with one’s life.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Hysteria (Hy)</div>
+            <div>{{ 125-hysteria-(hy)-score }}</div>
+            <div>
+                The Hysteria scale primarily measures five components — poor physical health, shyness, cynicism, headaches and neuroticism.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Psychopathic Deviate (Pd)</div>
+            <div>{{ 125-psychopathic-deviate-(pd)-score }}</div>
+            <div>
+                The Psychopathic Deviate scale measures general social maladjustment and the absence of strongly pleasant experiences.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Masculinity/Femininity (Mf)</div>
+            <div>{{ 125-masculinity/femininity-(mf)-score }}</div>
+            <div>
+                The Masculinity/Femininity scale measures interests in vocations and hobbies, aesthetic preferences, activity-passivity and personal sensitivity.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Paranoia (Pa)</div>
+            <div>{{ 125-paranoia-(pa)-score }}</div>
+            <div>
+                The Paranoia scale primarily measures interpersonal sensitivity, moral self-righteousness and suspiciousness
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Psychasthenia (Pt)</div>
+            <div>{{ 125-psychasthenia-(pt)-score }}</div>
+            <div>
+                The Psychasthenia scale is intended to measure a person’s inability to resist specific actions or thoughts, regardless of their maladaptive nature.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Schizophrenia (Sc)</div>
+            <div>{{ 125-schizophrenia-(sc)-score }}</div>
+            <div>
+                The Schizophrenia scale measures bizarre thoughts, peculiar perceptions, social alienation, poor familial relationships, difficulties in concentration and impulse control, lack of deep interests, disturbing question of self-worth and self-identity, and sexual difficulties.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Hypomania (Ma)</div>
+            <div>{{ 125-hypomania-(ma)-score }}</div>
+            <div>
+                The Hypomania scale is intended to measure milder degrees of excitement, characterized by an elated but unstable mood, psychomotor excitement.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Social Introversion (Si)</div>
+            <div>{{ 125-social-introversion-(si)-score }}</div>
+            <div>
+                The Social Introversion scale measures the social introversion and extroversion of a person.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 126-validity-scales == true %}
+        <h5>Validity Scales</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Lie (L)</div>
+            <div>{{ 126-lie-(l)-score }}</div>
+            <div>
+                The Lie scale is intended to identify individuals who are deliberately trying to avoid answering the MMPI honestly and in a frank manner.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>F</div>
+            <div>{{ 126-f-score }}</div>
+            <div>
+                The F scale is intended to detect unusual or atypical ways of answering the test items.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Back F (F<sup>b</sup>)</div>
+            <div>{{ 126-back-f-(fb)-score }}</div>
+            <div>
+                The Back F scale measures the same issues as the F scale, except only during the last half of the test.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>K</div>
+            <div>{{ 126-k-score }}</div>
+            <div>
+                The K scale is designed to identify psychopathology in people who otherwise would have profiles within the normal range.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 121-clinical-syndromes == true %}
+        <h5>Clinical Syndromes</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Anxiety (A)</div>
+            <div>{{ 121-anxiety-(a)-score }}</div>
+            <div>
+                An anxious patient often reports feeling either vaguely apprehensive or specifically phobic.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Somatoform (H)</div>
+            <div>{{ 121-somatoform-(h)-score }}</div>
+            <div>
+                Patients with elevated scores on the Somatoform scale express their psychological difficulties through somatic channels, persistent periods of fatigue and weakness, and a preoccupation with ill health and with a variety of dramatic but largely nonspecific pains in different and unrelated regions of the body.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Bipolar: Manic (N)</div>
+            <div>{{ 121-bipolar:-manic-(n)-score }}</div>
+            <div>
+                Bipolar patients evidence periods of superficial elation, inflated self-esteem, restless overactivity and distractibility, pressured speech, impulsiveness, and irritability.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Dysthymia (D)</div>
+            <div>{{ 121-dysthymia-(d)-score }}</div>
+            <div>
+                Patients with high scores on the Dysthymia scale remain involved in everyday life but have been preoccupied over a period of years with feelings of discouragement or guilt, a lack of initiative, behavioral apathy, low self-esteem, and frequently expressed futility and self-deprecatory comments.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Alcohol Dependence (B)</div>
+            <div>{{ 121-alcohol-dependence-(b)-score }}</div>
+            <div>
+                A patient with a high score on the Alcohol Dependence scale probably has a history of alcoholism, has tried to overcome the problem with minimal success, and as a consequence experiences considerable discomfort in family and work settings.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Drug Dependence (T)</div>
+            <div>{{ 121-drug-dependence-(t)-score }}</div>
+            <div>
+                An elevated Drug Dependence score indicates that the patient probably has a recurrent or recent history of drug abuse, tends to find it difficult to restrain impulses or keep them within conventional social limits, and is unable to manage the personal consequences of this behavior.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Post-Traumatic Stress Disorder {R}</div>
+            <div>{{ 121-post-traumatic-stress-disorder-{r}-score }}</div>
+            <div>
+                Patients with elevated scores of Post-Traumatic Stress Disorder scale have experienced an event that involved a threat to their life and reacted to it with intense fear or feelings or helplessness.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 122-severe-clinical-syndromes == true %}
+        <h5>Severe Clinical Syndromes</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Thought Disorder (SS)</div>
+            <div>{{ 122-thought-disorder-(ss)-score }}</div>
+            <div>
+                Depending on the length and course of the problem, patients with elevated scores on this scale are usually classified as “schizophrenic” or “schizophreniform” or as having a brief reactive psychosis.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Major Depression (CC)</div>
+            <div>{{ 122-major-depression---(cc)-score }}</div>
+            <div>
+                Patients with high scores on this scale are usually incapable of functioning in a normal environment, are severely depressed, and express a dread of the future, suicidal ideation, and a sense of hopeless resignation.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Delusional Disorder (PP)</div>
+            <div>{{ 122-delusional-disorder-(pp)-score }}</div>
+            <div>
+                Patients with delusional disorder are frequently considered acutely paranoid and may become periodically belligerent, voicing irrational but interconnected delusions of a jealous, persecutory, or grandiose nature.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 123-modifying-indices == true %}
+        <h5>Modifying Indices</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Disclosure (X)</div>
+            <div>{{ 123-disclosure-(x)-score }}</div>
+            <div>
+                The Disclosure index (Scale X) is the next index that may signify problematic response behavior, notably whether the patient was inclined to be frank and self-revealing or reticent and secretive.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Desirability (Y)</div>
+            <div>{{ 123-desirability-(y)-score }}</div>
+            <div>
+                The Desirability index (Scale Y) assesses the degree to which the patient’s results may have been affected by his or her inclination to appear socially attractive, morally virtuous, or emotionally well composed.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Debasement (Z)</div>
+            <div>{{ 123-debasement-(z)-score }}</div>
+            <div>
+                The Debasement index (Scale Z) generally reflects tendencies that are the opposite of those reflected by Scale Y.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if 124-random-response-indicators == true %}
+        <h5>Random Response Indicators</h5>
+        <div class="test-table">
+          <div class="table__row table__header">
+            <div>Scale</div>
+            <div>Score</div>
+            <div>Description</div>
+          </div>
+          <div class="table__row">
+            <div>Invalidity (V)</div>
+            <div>{{ 124-invalidity-(v)-score }}</div>
+            <div>
+                Help detect random responding. Scale V consists of three items for which a True response is highly implausible if the test-take is responding to the item content.
+            </div>
+          </div>
+          <div class="table__row">
+            <div>Inconsistency (W)</div>
+            <div>{{ 124-inconsistency-(w)-score }}</div>
+            <div>
+                Help detect random responding. Scale W comprises 44 item response pairs: each keyed pair of responses is semantically contradictory.
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+       <!-- MMPI-A -->
+       {% if MMPI-A == true %}
+       <div class="domain__test">
+         <h3>Social-Emotional</h3>
+         <h4 class="h3--sib-h4">MMPI-A</h4>
+         <p>
+             The Minnesota Personality Inventory-2 is a psychological test that assesses personality traits and psychopathology. The MMPI-2 is designed with 10 clinical scales which assess 10 major categories of abnormal human behavior, and four validity scales, which assess the person’s general test-taking attitude and whether they answered the items on the test in a truthful and accurate manner.
+         </p>
+         <hr>
+ 
+         {% if 128-clinical-scales == true %}
+         <h5>Clinical Scales</h5>
+         <div class="test-table">
+           <div class="table__row table__header">
+             <div>Scale</div>
+             <div>Score</div>
+             <div>Description</div>
+           </div>
+           <div class="table__row">
+             <div>Hypochondriasis (Hs)</div>
+             <div>{{ 539-hypochondriasis-(hs)-score }}</div>
+             <div>
+                The Hypochondriasis scale tapes a wide variety of vague and nonspecific complaints about bodily functioning. There are two primary factors that this subscale measures — poor physical health and gastrointestinal difficulties.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Depression (D)</div>
+             <div>{{ 540-depression-(d)-score }}</div>
+             <div>
+                 The Depression scale measures clinical depression, which is characterized by poor morale, lack of hope in the future, and a general dissatisfaction with one’s life
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Hysteria (Hy)</div>
+             <div>{{ 541-hysteria-(hy)-score }}</div>
+             <div>
+                 The Hysteria scale primarily measures five components — poor physical health, shyness, cynicism, headaches and neuroticism.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Psychopathic Deviate (Pd)</div>
+             <div>{{ 542-psychopathic-deviate-(pd)-score }}</div>
+             <div>
+                 The Psychopathic Deviate scale measures general social maladjustment and the absence of strongly pleasant experiences.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Masculinity/Femininity (Mf)</div>
+             <div>{{ 543-masculinity/femininity-(mf)-score }}</div>
+             <div>
+                 The Masculinity/Femininity scale measures interests in vocations and hobbies, aesthetic preferences, activity-passivity and personal sensitivity.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Paranoia (Pa)</div>
+             <div>{{ 544-paranoia-(pa)-score }}</div>
+             <div>
+                 The Paranoia scale primarily measures interpersonal sensitivity, moral self-righteousness and suspiciousness
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Psychasthenia (Pt)</div>
+             <div>{{ 545-psychasthenia-(pt)-score }}</div>
+             <div>
+                 The Psychasthenia scale is intended to measure a person’s inability to resist specific actions or thoughts, regardless of their maladaptive nature.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Schizophrenia (Sc)</div>
+             <div>{{ 546-schizophrenia-(sc)-score }}</div>
+             <div>
+                 The Schizophrenia scale measures bizarre thoughts, peculiar perceptions, social alienation, poor familial relationships, difficulties in concentration and impulse control, lack of deep interests, disturbing question of self-worth and self-identity, and sexual difficulties.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Hypomania (Ma)</div>
+             <div>{{ 547-hypomania-(ma)-score }}</div>
+             <div>
+                 The Hypomania scale is intended to measure milder degrees of excitement, characterized by an elated but unstable mood, psychomotor excitement.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Social Introversion (Si)</div>
+             <div>{{ 548-social-introversion-(si)-score }}</div>
+             <div>
+                 The Social Introversion scale measures the social introversion and extroversion of a person.
+             </div>
+           </div>
+         </div>
+         {% endif %}
+ 
+         {% if 127-validity-scales == true %}
+         <h5>Validity Scales</h5>
+         <p>
+            The Minnesota Multiphasic Personality Inventory-A (MMPI-A) contains eight validity scales used to describe the extent of the individual’s cooperation with the assessment. It can indicate whether the individual wanted to call attention to his or her symptoms or, conversely, if he or she was inclined to deny problems.
+         </p>
+         <div class="test-table">
+           <div class="table__row table__header">
+             <div>Scale</div>
+             <div>Score</div>
+             <div>Description</div>
+           </div>
+           <div class="table__row">
+             <div>CNS</div>
+             <div>{{ 127-cns-score }}</div>
+             <div>
+                “Cannot Say”. Questions not answered.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>VRIN</div>
+             <div>{{ 127-vrin-score }}</div>
+             <div>
+                Variable Response Inconsistency. Answering similar/opposite question pairs inconsistently.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>TRIN</div>
+             <div>{{ 127-trin-score }}</div>
+             <div>
+                True Response Inconsistency. Answering questions all true/all false.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>F</div>
+             <div>{{ 127-f-score }}</div>
+             <div>
+                The F scale is intended to detect unusual or atypical ways of answering the test items.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>F1</div>
+             <div>{{ 127-f1-score }}</div>
+             <div>
+                The F1 scale is intended to detect unusual or atypical ways of answering questions in the first 350 items.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>F2</div>
+             <div>{{ 127-f2-score }}</div>
+             <div>
+                The F2 scale is intended to detect unusual or atypical ways of answering questions after the first 240 items.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>L</div>
+             <div>{{ 127-l-score }}</div>
+             <div>
+                The Lie scale is intended to identify individuals who are deliberately trying to avoid answering the MMPI honestly and in a frank manner.
+             </div>
+           </div>
+           <div class="table__row">
+              <div>K</div>
+              <div>{{ 127-k-score }}</div>
+              <div>
+                  Defensiveness. Denial/Evasiveness.
+              </div>
+            </div>
+         </div>
+         {% endif %}
+       </div>
+       {% endif %}
+
+       <!-- Rorschach -->
+       {% if Rorschach == true %}
+       <div class="domain__test">
+         <h3>Social-Emotional</h3>
+         <h4 class="h3--sib-h4">Rorschach</h4>
+         <p>
+            Rorschach is a projective free response measure that prompts the examinee to provide responses to a series of inkblots. Responses are carefully analyzed according to the Comprehensive System. The test provides a measure of personality functioning across various domains including capacity for control, tolerance for stress, affect, self perception, interpersonal perception, information processing, cognitive mediation, and ideation.
+         </p>
+       </div>
+       {% endif %}
+
+       <!-- TSCC -->
+       {% if TSCC == true %}
+       <div class="domain__test">
+         <h3>Social-Emotional</h3>
+         <h4 class="h3--sib-h4">TSCC</h4>
+         <p>
+            TSCC (Trauma Symptom Checklist for Children) is a self-report measure of posttraumatic distress and related psychological symptomatology. It is intended for use in the evaluation of children who have experienced traumatic events, including childhood physical and sexual abuse, victimization by peers (e.g., physical or sexual assault), major losses, the witnessing of violence done to others, and natural disasters.
+         </p>
+         <hr>
+ 
+         {% if 128-validity-scales == true %}
+         <h5>Validity Scale</h5>
+         <p>
+            TSCC has two validity scales: one that taps a child’s tendency to deny any symptomatology and one that indexes a tendency to overrespond to symptom items.
+         </p>
+         <ul>
+            <li>
+              Underresponse (UND) &#10142; The UND scale reflects the extent to which the respondent denied behaviors, thoughts, or feelings that most others would report at some nonzero level.
+            </li>
+            <li>
+              Hyperresponse (HYP) &#10142; Is when the child indiscriminately endorses the highest frequency point for many or all symptom items.
+            </li> 
+         </ul>
+         <div class="test-table">
+           <div class="table__row table__header">
+             <div>Scale</div>
+             <div>Score</div>
+             <div>Description</div>
+           </div>
+           <div class="table__row">
+             <div>Underresponse (UND)</div>
+             <div>{{ 142-underresponse-(und)-score }}</div>
+             <div>
+                Consists of the number of 0s endorsed for those items least likely to receive a 0 in the normative sample. Reflects a tendency toward denial, a general under-endorsement response set, or a need to appear unusually symptom-free.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Hyperresponse (HYP)</div>
+             <div>{{ 142-hyperresponse-(hyp)-score }}</div>
+             <div>
+                Consists of the number of 3s marked on diverse items that rarely received a 3 in the normative sample. Indicates a general overresponse to TSCC items, a specific need to appear especially symptomatic, or a state of being overwhelmed by traumatic stress.
+             </div>
+           </div>
+         </div>
+         {% endif %}
+ 
+         {% if 127-clinical-scales == true %}
+         <h5>Clinical Scale</h5>
+         <p>
+            The clinical scales of the TSCC measure the extent to which the child endorses six different types of potentially trauma-related symptoms. Five of the six scales (all but PTS) are nonoverlapping at the item level. Two of these clinical scales (DIS and SC) also contain scorable subscales, based upon principle components analyses and scale content.
+         </p>
+         <ul>
+            <li>
+                Anxiety (ANX) &#10142; Scores on the Anxiety (ANX) scale reflect the extent to which the child is experiencing generalized anxiety, hyperarousal, and worry, as well as specific fears of men or women, of the dark, and of being killed. Also tapped by this scale are episodes of free-floating anxiety and fears of impending danger.
+            </li>
+            <li>
+                Depression (DEP) &#10142; The Depression (DEP) scale taps feelings of sadness, unhappiness, and loneliness; episodes of tearfulness; and depressive cognitions such as guilt and self-denigration.
+            </li>
+            <li>
+                Anger (ANG) &#10142; Scores on the Anger (ANG) scale indicate the extent of angry thoughts, feelings, and behaviors reported by the child.
+            </li>
+            <li>
+                Posttraumatic Stress &#10142; The Posttraumatic Stress (PTS) scale consists of items reflecting classic posttraumatic symptoms.
+            </li>
+            <li>
+                Dissociation (DIS) &#10142; The Dissociation (DIS) scale measures the extent to which the child experiences mild-to-moderate dissociative symptomatology.
+            </li>
+            <li>
+                Sexual Concerns (SC) &#10142; The Sexual Concerns (SC) scale measures sexual distress and preoccupation.
+            </li>
+         </ul>
+         <div class="test-table">
+           <div class="table__row table__header">
+             <div>Scale</div>
+             <div>Score</div>
+             <div>Description</div>
+           </div>
+           <div class="table__row">
+             <div>Anxiety (ANX)</div>
+             <div>{{ 143-anxiety-(anx)-score }}</div>
+             <div>
+                Generalized anxiety, hyperarousal, and worry; specific fears (e.g., of men, women, or both; of the dark; of being killed); episodes of free-floating anxiety; and a sense of impending danger.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Depression (DEP)</div>
+             <div>{{ 143-depression-(dep)-score }}</div>
+             <div>
+                Feelings of sadness, unhappiness, and loneliness; episodes of tearfulness; depressive cognitions such as guilt and self-denigration; and self-injuriousness and suicidality.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Anger (ANG)</div>
+             <div>{{ 143-anger-(ang)-score }}</div>
+             <div>
+                Any thoughts, feelings, and behaviors, including feeling mad, feeling mean, and hating others; having difficulty de-escalating anger; wanting to yell at or hurt people; and arguing and fighting.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Posttraumatic Stress (PTS)</div>
+             <div>{{ 143-posttraumatic-stress-(pts)-score }}</div>
+             <div>
+                Posttraumatic symptoms, including intrusive thoughts, sensations, and memories of painful past events; nightmares; fears; and cognitive avoidance of painful feelings.
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Dissociation (DIS)</div>
+             <div>{{ 143-dissociation-(dis)-score }}</div>
+             <div>
+                Dissociative symptomatology, including derealization; one’s mind going blank; emotional numbing; pretending to be someone else or somewhere else; day-dreaming; memory problems; and dissociative avoidance. Has two subscales: DIS-O (Overt Dissociation) and DIS-F (Fantasy).
+             </div>
+           </div>
+           <div class="table__row">
+             <div>Sexual Concerns (SC)</div>
+             <div>{{ 143-sexual-concerns-(sc)-score }}</div>
+             <div>
+                Sexual thoughts or feelings that are atypical when they occur earlier than expected or with greater than normal frequency; sexual conflicts; negative responses to sexual stimuli; and fear of being sexually exploited. Has two subscales: SC-P (Sexual Preoccupation) and SC-D (Sexual Distress).
+             </div>
+           </div>
+         </div>
+         {% endif %}
+       </div>
+       {% endif %}
 
 
     </section>
