@@ -13,6 +13,7 @@ a:hover {
 }
 
 .btn-wrap {
+  cursor: pointer;
   margin-top: 8.1rem;
 
   .btn {
@@ -42,6 +43,7 @@ a:hover {
       position: relative;
 
       > span {
+        cursor: pointer;
         font-family: $sans-serif;
         transition: color 0.25s linear 0.25s;
       }
@@ -87,8 +89,13 @@ a:hover {
     }
   }
 
+  .btn--width-auto {
+    width: unset;
+  }
+
   > span {
     color: $text-gray;
+    cursor: pointer;
     font-family: "Montserrat", sans-serif;
     @include font-size(1.8);
     font-weight: bold;

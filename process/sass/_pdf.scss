@@ -74,6 +74,7 @@
         li {
           font-size: 16pt;
           font-weight: 700;
+          line-height: 19pt;
           margin-bottom: 10pt;
           margin-left: 0.125in;
           position: relative;
@@ -85,11 +86,32 @@
           em {
             font-weight: 400;
           }
+
+          a {
+            font-size: 16pt;
+          }
+          ul {
+            li {
+              font-weight: 500;
+              margin-top: 9px;
+              ul {
+                li:before {
+                  content: "\026AC";
+                }
+              }
+            }
+            li:before {
+              color: rgb(45, 154, 204);
+              content: "\02731";
+              font-size: 14pt;
+              top: 0;
+            }
+          }
         }
 
         li:before {
-          content: "\25B6";
           color: rgb(57, 164, 212);
+          content: "\25B6";
           position: absolute;
           top: 0;
           left: -0.25in;
@@ -116,7 +138,7 @@
           padding-bottom: 18px;
 
           > div:nth-child(1) {
-            flex: 0 0 150px;
+            flex: 0 0 220px;
             margin-right: 18px;
           }
           > div:nth-child(2) {
@@ -137,8 +159,31 @@
           }
         }
       }
+      .test-table.test-table--appendix {
+        .table__row {
+          > div:nth-child(1) {
+            flex: none;
+            width: 28.56vw;
+          }
+          > div:nth-child(2) {
+            flex: none;
+            width: 14.28vw;
+          }
+          > div:nth-child(3) {
+            flex: none;
+            margin-right: 18px;
+            width: 14.28vw;
+          }
+          > div:nth-child(4) {
+            flex: none;
+            margin-right: 18px;
+            width: 14.28vw;
+          }
+        }
+      }
 
       .domain__test {
+        flex: 1 1 100%;
         h3 {
           color: rgb(57, 164, 212);
           font-size: 24pt;
@@ -165,6 +210,10 @@
           font-size: 16pt;
           margin: 36px 0 9px;
           text-transform: uppercase;
+
+          .lowercase {
+            text-transform: none;
+          }
         }
         h6 {
           color: rgb(57, 164, 212);
@@ -188,6 +237,15 @@
         }
       }
     }
+    section.li-not-bold {
+      li {
+        font-weight: 400;
+      }
+    }
+    section.no-flex {
+      display: block;
+      flex-flow: unset;
+    }
   }
 }
 
@@ -207,6 +265,48 @@
   div {
     font-size: 12pt;
     font-weight: 300;
+  }
+}
+
+//Recommendations
+.pdf-t main section.recommendations {
+  display: block;
+}
+
+//Appendix
+.appendices {
+  .appendix {
+    margin: 0.5in 0;
+
+    h2 {
+      flex: 0 1 auto;
+      margin: 0;
+    }
+
+    h5 {
+      color: #777;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16pt;
+      margin: 0.5in 0 0.25in;
+      text-transform: uppercase;
+    }
+
+    h5:first-of-type {
+      margin: 0.25in 0;
+    }
+
+    .test-table--appendix {
+      border-bottom: 1px solid #a3a3a3;
+
+      .table__row.table__header {
+        border-top: none;
+        border-bottom: none;
+        padding: 0;
+      }
+      .table__row {
+        border-bottom: none;
+      }
+    }
   }
 }
 
