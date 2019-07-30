@@ -140,12 +140,13 @@
                 > li:before {
                   //content: "\026AC";
                   content: "";
+                  border-color: #d4ce15;
                   position: absolute;
                   top: 4px;
                   left: -0.25in;
-                  border-top: 10px solid transparent;
-                  border-bottom: 10px solid transparent;
-                  border-left: 15px solid hotpink;
+                  // border-top: 10px solid transparent;
+                  // border-bottom: 10px solid transparent;
+                  // border-left: 15px solid hotpink;
                 }
               }
             }
@@ -154,9 +155,9 @@
               // content: "\02731";
               // font-size: 14pt;
               // top: 0;
+              content: "";
               border: 6px solid hotpink;
               border-radius: 50%;
-              content: "";
               position: absolute;
               top: 5px;
               left: -0.25in;
@@ -171,12 +172,14 @@
           // top: 0;
           // left: -0.25in;
           content: "";
+          border: 6px solid #39a4d4;
+          border-radius: 50%;
           position: absolute;
-          top: 4px;
+          top: 6px;
           left: -0.25in;
-          border-top: 10px solid transparent;
-          border-bottom: 10px solid transparent;
-          border-left: 15px solid #39a4d4;
+          // border-top: 10px solid transparent;
+          // border-bottom: 10px solid transparent;
+          // border-left: 15px solid #39a4d4;
         }
       }
 
